@@ -7,29 +7,28 @@
 #SBATCH --gres=gpu:1
 #SBATCH --time=96:00:00
 #SBATCH --array=0-4
-#SBATCH --output=/scratch/gpfs/MARTONOSI/sk2415/ml/logs/train_fold%a_%j.out
-#SBATCH --error=/scratch/gpfs/MARTONOSI/sk2415/ml/logs/train_fold%a_%j.err
-#SBATCH --mail-type=FAIL,END
-#SBATCH --mail-user=sk2415@princeton.edu
 
 set -eo pipefail
 
 log(){ printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*"; }
 
-REPO_ROOT=${REPO_ROOT:-/scratch/gpfs/MARTONOSI/sk2415/ml}
+# Source user configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_FILE="${SCRIPT_DIR}/../config.sh"
+if [ -f "$CONFIG_FILE" ]; then
+    source "$CONFIG_FILE"
+else
+    log "[error] config.sh not found. Copy config.sh.example to config.sh and edit it."
+    exit 1
+fi
+
+# Configuration
 DATASET_ID=${DATASET_ID:-001}
 CONFIG=${CONFIG:-3d_fullres}
 TRAINER=${TRAINER:-nnUNetTrainerWandb}
 FOLD=${SLURM_ARRAY_TASK_ID}
 
-# Set nnU-Net environment variables
-export nnUNet_raw="${REPO_ROOT}/nnUNet_raw"
-export nnUNet_preprocessed="${REPO_ROOT}/nnUNet_preprocessed"
-export nnUNet_results="${REPO_ROOT}/nnUNet_results"
-
 # W&B offline mode (no internet on compute nodes)
-export WANDB_MODE=offline
-export WANDB_PROJECT=${WANDB_PROJECT:-nnunet-lumbar-muscle}
 export WANDB_DIR="${REPO_ROOT}/nnUNet_results"
 
 mkdir -p "$REPO_ROOT/logs"
@@ -41,10 +40,12 @@ log "  Fold: $FOLD"
 log "  Trainer: $TRAINER"
 
 module purge
-module load anaconda3/2024.10 nvhpc/25.5 openmpi/cuda-12.9/nvhpc-25.5/4.1.8 || { log "[error] Failed to load modules."; exit 1; }
-export CUDA_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.5/cuda/12.9
+if [ -n "$CLUSTER_MODULES" ]; then
+    module load $CLUSTER_MODULES || { log "[error] Failed to load modules."; exit 1; }
+fi
+[ -n "$CUDA_PATH" ] && export CUDA_PATH
 eval "$(conda shell.bash hook)"
-conda activate /scratch/gpfs/MARTONOSI/sk2415/ml/env || { log "[error] Failed to activate conda env."; exit 1; }
+conda activate "$CONDA_ENV" || { log "[error] Failed to activate conda env."; exit 1; }
 
 nvidia-smi || true
 log "CUDA devices: ${CUDA_VISIBLE_DEVICES:-not-set}"

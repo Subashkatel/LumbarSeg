@@ -1,0 +1,58 @@
+#!/bin/bash
+# ===========================================
+# LumbarSeg - User Configuration
+# ===========================================
+#
+# Copy this file to config.sh and edit with your settings:
+#   cp config.sh.example config.sh
+#   nano config.sh
+#
+# This file is sourced by SLURM scripts to set user-specific paths.
+# config.sh is in .gitignore and will not be committed.
+
+# ============================================
+# REQUIRED: Set these for your environment
+# ============================================
+
+# Your project directory (where you cloned LumbarSeg)
+export REPO_ROOT="/path/to/LumbarSeg"
+
+# Your conda environment name or path
+export CONDA_ENV="lumbarseg"
+# Or use full path: export CONDA_ENV="/path/to/conda/envs/lumbarseg"
+
+# ============================================
+# OPTIONAL: Email notifications
+# ============================================
+
+# Uncomment and set your email for SLURM notifications
+# export SLURM_MAIL_USER="your.email@example.com"
+
+# ============================================
+# OPTIONAL: Cluster-specific modules
+# ============================================
+
+# Module load commands for your cluster (space-separated)
+# Example for Princeton cluster:
+# export CLUSTER_MODULES="anaconda3/2024.10 nvhpc/25.5 openmpi/cuda-12.9/nvhpc-25.5/4.1.8"
+# Example for generic cluster:
+# export CLUSTER_MODULES="anaconda3 cuda/12.1"
+export CLUSTER_MODULES=""
+
+# CUDA path (if needed)
+# export CUDA_PATH="/usr/local/cuda"
+
+# ============================================
+# nnU-Net paths (auto-configured from REPO_ROOT)
+# ============================================
+
+export nnUNet_raw="${REPO_ROOT}/nnUNet_raw"
+export nnUNet_preprocessed="${REPO_ROOT}/nnUNet_preprocessed"
+export nnUNet_results="${REPO_ROOT}/nnUNet_results"
+
+# ============================================
+# W&B configuration
+# ============================================
+
+export WANDB_MODE="offline"
+export WANDB_PROJECT="nnunet-lumbar-muscle"
