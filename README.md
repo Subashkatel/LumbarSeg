@@ -33,8 +33,10 @@ Trained on 347 subjects with 5-fold cross-validation using nnU-Net v2.
 # Clone the repository
 git clone https://github.com/Subashkatel/LumbarSeg.git
 cd LumbarSeg
+```
 
-# Create conda environment
+**Option A: Using Conda**
+```bash
 conda create -n lumbarseg python=3.11
 conda activate lumbarseg
 
@@ -47,6 +49,21 @@ pip install torch torchvision
 
 # Install LumbarSeg
 pip install .
+```
+
+**Option B: Using Pixi**
+```bash
+pixi init
+pixi add python=3.11 pytorch torchvision
+
+# For CUDA support, add:
+pixi add pytorch-cuda=12.1 -c pytorch -c nvidia
+
+# Install LumbarSeg
+pixi run pip install .
+
+# Run commands with pixi
+pixi run lumbarseg -i scan.nii.gz -o seg.nii.gz
 ```
 
 ### Run Segmentation
