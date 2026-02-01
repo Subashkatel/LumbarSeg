@@ -27,73 +27,106 @@ Trained on 347 subjects with 5-fold cross-validation using nnU-Net v2.
 
 ## Quick Start
 
-### 1. Install Dependencies
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Subashkatel/LumbarSeg.git
+cd LumbarSeg
+
 # Create conda environment
 conda create -n lumbarseg python=3.11
 conda activate lumbarseg
 
-# Install PyTorch (CUDA 12.1)
+# Install PyTorch
+# For CUDA (Linux/Windows with NVIDIA GPU):
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# Install nnU-Net v2
-pip install nnunetv2
+# For Mac (CPU or MPS):
+pip install torch torchvision
 
-# Install additional dependencies
-pip install nibabel numpy scipy pandas matplotlib tqdm wandb
+# Install LumbarSeg
+pip install .
 ```
 
-### 2. Install Custom Trainer
+### Run Segmentation
 
-This model uses a custom nnU-Net trainer with W&B logging. You must install it before running inference:
+**That's it! Just two commands:**
 
 ```bash
-# Install the custom trainer to your nnU-Net installation
+# Single file
+lumbarseg -i scan.nii.gz -o segmentation.nii.gz
+
+# Batch processing (entire folder)
+lumbarseg -i scans_folder/ -o results_folder/
+```
+
+Model weights are downloaded automatically on first use (~2.5 GB).
+
+### Python API
+
+```python
+from lumbarseg import segment
+
+# Single file
+segment("scan.nii.gz", "segmentation.nii.gz")
+
+# With options
+segment("scan.nii.gz", "seg.nii.gz", fold=0, device="cpu")
+```
+
+### CLI Options
+
+```bash
+lumbarseg -i INPUT -o OUTPUT [options]
+
+Required:
+  -i, --input      Input NIfTI file or directory
+  -o, --output     Output file or directory
+
+Options:
+  --fast           Use single fold for faster inference (~90% Dice)
+  -d, --device     Device: cuda, cpu, or mps (auto-detected)
+  -f, --fold       Fold(s): 0-4 or 'all' for ensemble (default: all)
+  -q, --quiet      Suppress output messages
+```
+
+### Advanced: Manual nnU-Net Usage
+
+For researchers who want direct nnU-Net access:
+
+```bash
+# Install custom trainer
 ./scripts/install_trainer.sh
-```
 
-### 3. Download Model Weights
-
-```bash
-# Download pre-trained weights from GitHub Releases
+# Download weights manually
 ./scripts/download_weights.sh
 
-# Or manually download from:
-# https://github.com/USERNAME/LumbarSeg/releases/tag/v1.0
-```
-
-### 4. Run Inference
-
-```bash
 # Set environment variables
 export nnUNet_results=/path/to/LumbarSeg/nnUNet_results
 export nnUNet_raw=/path/to/LumbarSeg/nnUNet_raw
 export nnUNet_preprocessed=/path/to/LumbarSeg/nnUNet_preprocessed
 
-# Run prediction (ensemble of 5 folds for best accuracy)
+# Run nnU-Net directly
 nnUNetv2_predict \
-    -i /path/to/your/images \
+    -i /path/to/images \
     -o /path/to/output \
-    -d 001 \
-    -c 3d_fullres \
-    -tr nnUNetTrainerWandb \
-    -f 0 1 2 3 4
+    -d 001 -c 3d_fullres -tr nnUNetTrainerWandb -f 0 1 2 3 4
 ```
 
 ## Input Requirements
 
-- **Format**: NIfTI (.nii.gz)
+- **Format**: NIfTI (.nii or .nii.gz)
 - **Modality**: T1-weighted or T2-weighted MRI of lumbar spine
-- **Naming**: Files must end with `_0000.nii.gz` (nnU-Net convention)
+- **Naming**: Any filename (the CLI handles nnU-Net naming conventions automatically)
 - **Orientation**: Any orientation (nnU-Net handles reorientation)
 
 Example:
 ```
 input_folder/
-├── patient001_0000.nii.gz
-├── patient002_0000.nii.gz
-└── patient003_0000.nii.gz
+├── patient001.nii.gz
+├── patient002.nii.gz
+└── patient003.nii.gz
 ```
 
 ## Output
@@ -109,21 +142,24 @@ Predictions are saved as multi-label NIfTI files with values:
 
 ```
 LumbarSeg/
+├── lumbarseg/                  # Main Python package
+│   ├── __init__.py             # Package init with segment() function
+│   ├── python_api.py           # Python API implementation
+│   ├── cli.py                  # Command-line interface
+│   └── config.py               # Configuration and constants
 ├── nnunetv2_trainers/          # Custom nnU-Net trainer
 │   └── nnUNetTrainerWandb.py   # Trainer with W&B logging
 ├── scripts/                    # Training and utility scripts
 │   ├── install_trainer.sh      # Install custom trainer
 │   ├── download_weights.sh     # Download pre-trained weights
-│   ├── train_nnunet.sbatch     # Single-fold training
-│   ├── train_nnunet_5fold.sbatch # 5-fold cross-validation
-│   ├── eval_crossval.sbatch    # Cross-validation evaluation
-│   └── eval_ensemble.sbatch    # Ensemble evaluation
+│   ├── train_nnunet.sbatch     # Single-fold training (SLURM)
+│   ├── train_nnunet_5fold.sbatch # 5-fold cross-validation (SLURM)
+│   ├── eval_crossval.sbatch    # Cross-validation evaluation (SLURM)
+│   └── eval_ensemble.sbatch    # Ensemble evaluation (SLURM)
 ├── evaluation/                 # Evaluation utilities
 │   ├── compute_metrics.py      # Dice, HD95, ASSD metrics
 │   └── generate_visualizations.py # GT vs Pred overlays
-├── nnUNet_raw/                 # Dataset configuration
-│   └── Dataset001_LumbarMuscle/
-│       └── dataset.json
+├── setup.py                    # Package installation
 ├── requirements.txt
 ├── CLAUDE.md                   # Developer documentation
 └── README.md
@@ -204,7 +240,7 @@ If you use LumbarSeg in your research, please cite:
   author = {Your Name},
   title = {LumbarSeg: Automatic Lumbar Paraspinal Muscle Segmentation},
   year = {2026},
-  url = {https://github.com/USERNAME/LumbarSeg}
+  url = {https://github.com/Subashkatel/LumbarSeg}
 }
 ```
 
