@@ -6,11 +6,24 @@
 #   ./scripts/wandb_sync.sh                    # Sync all runs in nnUNet_results
 #   ./scripts/wandb_sync.sh /path/to/run_dir   # Sync specific run
 
+set -eo pipefail
 
-REPO_ROOT=${REPO_ROOT:-/scratch/gpfs/MARTONOSI/sk2415/ml}
+# Source user configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_FILE="${SCRIPT_DIR}/../config.sh"
+if [ -f "$CONFIG_FILE" ]; then
+    source "$CONFIG_FILE"
+else
+    echo "[error] config.sh not found. Copy config.sh.example to config.sh and edit it."
+    exit 1
+fi
 
-module load anaconda3/2024.10
-conda activate "${REPO_ROOT}/env"
+# Load modules if specified
+if [ -n "$CLUSTER_MODULES" ]; then
+    module load $CLUSTER_MODULES 2>/dev/null || true
+fi
+eval "$(conda shell.bash hook)"
+conda activate "$CONDA_ENV" || { echo "[error] Failed to activate conda env."; exit 1; }
 
 if [[ $# -ge 1 ]]; then
     # Sync specific directory

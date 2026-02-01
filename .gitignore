@@ -119,3 +119,6 @@ temp/
 *.pem
 secrets.json
 credentials.json
+
+# Local configuration (contains user-specific paths)
+config.sh

@@ -6,17 +6,22 @@
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
 #SBATCH --time=24:00:00
-#SBATCH --output=/scratch/gpfs/MARTONOSI/sk2415/ml/logs/ensemble_%j.out
-#SBATCH --error=/scratch/gpfs/MARTONOSI/sk2415/ml/logs/ensemble_%j.err
-#SBATCH --mail-type=FAIL,END
-#SBATCH --mail-user=sk2415@princeton.edu
 
 set -eo pipefail
 
 log(){ printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*"; }
 
+# Source user configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_FILE="${SCRIPT_DIR}/../config.sh"
+if [ -f "$CONFIG_FILE" ]; then
+    source "$CONFIG_FILE"
+else
+    log "[error] config.sh not found. Copy config.sh.example to config.sh and edit it."
+    exit 1
+fi
+
 # Configuration
-REPO_ROOT=${REPO_ROOT:-/scratch/gpfs/MARTONOSI/sk2415/ml}
 DATASET_ID=${DATASET_ID:-001}
 CONFIG=${CONFIG:-3d_fullres}
 TRAINER=${TRAINER:-nnUNetTrainerWandb}
@@ -26,15 +31,6 @@ INPUT_DIR="${REPO_ROOT}/nnUNet_raw/Dataset001_LumbarMuscle/imagesTr"
 LABELS_DIR="${REPO_ROOT}/nnUNet_raw/Dataset001_LumbarMuscle/labelsTr"
 OUTPUT_DIR="${REPO_ROOT}/predictions_ensemble"
 VIZ_DIR="${OUTPUT_DIR}/visualizations"
-
-# nnU-Net environment
-export nnUNet_raw="${REPO_ROOT}/nnUNet_raw"
-export nnUNet_preprocessed="${REPO_ROOT}/nnUNet_preprocessed"
-export nnUNet_results="${REPO_ROOT}/nnUNet_results"
-
-# W&B offline mode
-export WANDB_MODE=offline
-export WANDB_PROJECT=${WANDB_PROJECT:-nnunet-lumbar-muscle}
 
 mkdir -p "$REPO_ROOT/logs" "$OUTPUT_DIR" "$VIZ_DIR"
 
@@ -50,10 +46,12 @@ log ""
 
 # Load modules and activate environment
 module purge
-module load anaconda3/2024.10 nvhpc/25.5 openmpi/cuda-12.9/nvhpc-25.5/4.1.8 || { log "[error] Failed to load modules."; exit 1; }
-export CUDA_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.5/cuda/12.9
+if [ -n "$CLUSTER_MODULES" ]; then
+    module load $CLUSTER_MODULES || { log "[error] Failed to load modules."; exit 1; }
+fi
+[ -n "$CUDA_PATH" ] && export CUDA_PATH
 eval "$(conda shell.bash hook)"
-conda activate /scratch/gpfs/MARTONOSI/sk2415/ml/env || { log "[error] Failed to activate conda env."; exit 1; }
+conda activate "$CONDA_ENV" || { log "[error] Failed to activate conda env."; exit 1; }
 
 nvidia-smi || true
 
