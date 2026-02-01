@@ -103,6 +103,7 @@ Thumbs.db
 htmlcov/
 .tox/
 .nox/
+test_output/
 
 # Documentation builds
 docs/_build/
