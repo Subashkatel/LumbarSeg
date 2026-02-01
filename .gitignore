@@ -1,0 +1,121 @@
+# ===========================================
+# LumbarSeg - Git Ignore Configuration
+# ===========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+.installed.cfg
+
+# Virtual Environments
+env/
+.env
+.venv/
+venv/
+ENV/
+
+# nnU-Net Generated Data (large, regenerable)
+nnUNet_preprocessed/
+nnUNet_results/
+predictions/
+predictions_cv/
+predictions_ensemble/
+
+# nnU-Net raw data (keep dataset.json config)
+nnUNet_raw/Dataset001_LumbarMuscle/imagesTr/
+nnUNet_raw/Dataset001_LumbarMuscle/labelsTr/
+nnUNet_raw/Dataset001_LumbarMuscle/imagesTs/
+
+# Medical Imaging Data (large files)
+*.nii.gz
+*.nii
+*.dcm
+*.nrrd
+*.mha
+*.mhd
+*.raw
+
+# Original/Archived Data
+disjoint_all/
+archive/
+
+# Logs and Outputs
+logs/
+*.log
+*.out
+*.err
+slurm-*.out
+slurm-*.err
+
+# W&B (Weights & Biases)
+wandb/
+.wandb/
+*.wandb
+
+# Checkpoints and Model Weights
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+checkpoint_*
+
+# Pickle and Cache
+*.pkl
+*.pickle
+*.b2nd
+.cache/
+
+# IDE and Editor
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# OS Generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
+*.swo
+*.swn
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Secrets (never commit)
+*.key
+*.pem
+secrets.json
+credentials.json
