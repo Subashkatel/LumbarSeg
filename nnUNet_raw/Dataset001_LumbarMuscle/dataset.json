@@ -1,0 +1,20 @@
+{
+  "channel_names": {
+    "0": "MRI"
+  },
+  "labels": {
+    "background": 0,
+    "L_ES": 1,
+    "R_ES": 2,
+    "L_MF": 3,
+    "R_MF": 4
+  },
+  "numTraining": 347,
+  "file_ending": ".nii.gz",
+  "name": "LumbarMuscle",
+  "description": "Lumbar paraspinal muscle segmentation (Erector Spinae and Multifidus)",
+  "reference": "Internal dataset",
+  "licence": "Internal use only",
+  "release": "1.0",
+  "overwrite_image_reader_writer": "SimpleITKIO"
+}

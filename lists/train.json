@@ -1,0 +1,2226 @@
+[
+  {
+    "sid": "SBT171",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT171/image/SBT171_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT171/masks/SBT171_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT171/masks/SBT171_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT171/masks/SBT171_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT171/masks/SBT171_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT063",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT063/image/SBT063_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT063/masks/SBT063_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT063/masks/SBT063_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT063/masks/SBT063_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT063/masks/SBT063_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT106",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT106/image/SBT106_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT106/masks/SBT106_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT106/masks/SBT106_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT106/masks/SBT106_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT106/masks/SBT106_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT168",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT168/image/SBT168_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT168/masks/SBT168_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT168/masks/SBT168_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT168/masks/SBT168_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT168/masks/SBT168_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT170",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT170/image/SBT170_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT170/masks/SBT170_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT170/masks/SBT170_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT170/masks/SBT170_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT170/masks/SBT170_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT012",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT012/image/SBT012_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT012/masks/SBT012_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT012/masks/SBT012_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT012/masks/SBT012_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT012/masks/SBT012_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT211",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT211/image/SBT211_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT211/masks/SBT211_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT211/masks/SBT211_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT211/masks/SBT211_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT211/masks/SBT211_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT178",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT178/image/SBT178_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT178/masks/SBT178_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT178/masks/SBT178_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT178/masks/SBT178_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT178/masks/SBT178_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT297",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT297/image/SBT297_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT297/masks/SBT297_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT297/masks/SBT297_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT297/masks/SBT297_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT297/masks/SBT297_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT223",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT223/image/SBT223_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT223/masks/SBT223_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT223/masks/SBT223_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT223/masks/SBT223_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT223/masks/SBT223_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT071",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT071/image/SBT071_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT071/masks/SBT071_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT071/masks/SBT071_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT071/masks/SBT071_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT071/masks/SBT071_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT180",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT180/image/SBT180_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT180/masks/SBT180_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT180/masks/SBT180_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT180/masks/SBT180_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT180/masks/SBT180_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT010",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT010/image/SBT010_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT010/masks/SBT010_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT010/masks/SBT010_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT010/masks/SBT010_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT010/masks/SBT010_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT124",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT124/image/SBT124_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT124/masks/SBT124_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT124/masks/SBT124_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT124/masks/SBT124_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT124/masks/SBT124_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT105",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT105/image/SBT105_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT105/masks/SBT105_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT105/masks/SBT105_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT105/masks/SBT105_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT105/masks/SBT105_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT239",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT239/image/SBT239_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT239/masks/SBT239_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT239/masks/SBT239_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT239/masks/SBT239_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT239/masks/SBT239_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT337",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT337/image/SBT337_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT337/masks/SBT337_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT337/masks/SBT337_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT337/masks/SBT337_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT337/masks/SBT337_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT107",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT107/image/SBT107_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT107/masks/SBT107_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT107/masks/SBT107_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT107/masks/SBT107_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT107/masks/SBT107_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT134",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT134/image/SBT134_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT134/masks/SBT134_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT134/masks/SBT134_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT134/masks/SBT134_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT134/masks/SBT134_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT250",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT250/image/SBT250_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT250/masks/SBT250_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT250/masks/SBT250_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT250/masks/SBT250_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT250/masks/SBT250_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT209",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT209/image/SBT209_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT209/masks/SBT209_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT209/masks/SBT209_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT209/masks/SBT209_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT209/masks/SBT209_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT092",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT092/image/SBT092_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT092/masks/SBT092_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT092/masks/SBT092_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT092/masks/SBT092_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT092/masks/SBT092_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT260",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT260/image/SBT260_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT260/masks/SBT260_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT260/masks/SBT260_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT260/masks/SBT260_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT260/masks/SBT260_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT267",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT267/image/SBT267_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT267/masks/SBT267_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT267/masks/SBT267_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT267/masks/SBT267_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT267/masks/SBT267_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT347",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT347/image/SBT347_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT347/masks/SBT347_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT347/masks/SBT347_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT347/masks/SBT347_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT347/masks/SBT347_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT044",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT044/image/SBT044_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT044/masks/SBT044_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT044/masks/SBT044_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT044/masks/SBT044_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT044/masks/SBT044_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT342",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT342/image/SBT342_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT342/masks/SBT342_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT342/masks/SBT342_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT342/masks/SBT342_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT342/masks/SBT342_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT285",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT285/image/SBT285_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT285/masks/SBT285_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT285/masks/SBT285_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT285/masks/SBT285_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT285/masks/SBT285_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT008",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT008/image/SBT008_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT008/masks/SBT008_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT008/masks/SBT008_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT008/masks/SBT008_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT008/masks/SBT008_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT313",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT313/image/SBT313_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT313/masks/SBT313_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT313/masks/SBT313_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT313/masks/SBT313_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT313/masks/SBT313_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT179",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT179/image/SBT179_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT179/masks/SBT179_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT179/masks/SBT179_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT179/masks/SBT179_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT179/masks/SBT179_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT276",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT276/image/SBT276_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT276/masks/SBT276_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT276/masks/SBT276_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT276/masks/SBT276_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT276/masks/SBT276_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT317",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT317/image/SBT317_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT317/masks/SBT317_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT317/masks/SBT317_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT317/masks/SBT317_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT317/masks/SBT317_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT007",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT007/image/SBT007_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT007/masks/SBT007_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT007/masks/SBT007_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT007/masks/SBT007_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT007/masks/SBT007_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT094",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT094/image/SBT094_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT094/masks/SBT094_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT094/masks/SBT094_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT094/masks/SBT094_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT094/masks/SBT094_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT060",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT060/image/SBT060_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT060/masks/SBT060_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT060/masks/SBT060_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT060/masks/SBT060_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT060/masks/SBT060_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT114",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT114/image/SBT114_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT114/masks/SBT114_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT114/masks/SBT114_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT114/masks/SBT114_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT114/masks/SBT114_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT155",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT155/image/SBT155_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT155/masks/SBT155_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT155/masks/SBT155_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT155/masks/SBT155_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT155/masks/SBT155_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT272",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT272/image/SBT272_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT272/masks/SBT272_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT272/masks/SBT272_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT272/masks/SBT272_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT272/masks/SBT272_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT056",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT056/image/SBT056_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT056/masks/SBT056_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT056/masks/SBT056_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT056/masks/SBT056_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT056/masks/SBT056_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT132",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT132/image/SBT132_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT132/masks/SBT132_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT132/masks/SBT132_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT132/masks/SBT132_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT132/masks/SBT132_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT228",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT228/image/SBT228_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT228/masks/SBT228_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT228/masks/SBT228_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT228/masks/SBT228_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT228/masks/SBT228_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT234",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT234/image/SBT234_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT234/masks/SBT234_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT234/masks/SBT234_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT234/masks/SBT234_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT234/masks/SBT234_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT025",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT025/image/SBT025_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT025/masks/SBT025_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT025/masks/SBT025_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT025/masks/SBT025_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT025/masks/SBT025_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT311",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT311/image/SBT311_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT311/masks/SBT311_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT311/masks/SBT311_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT311/masks/SBT311_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT311/masks/SBT311_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT104",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT104/image/SBT104_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT104/masks/SBT104_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT104/masks/SBT104_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT104/masks/SBT104_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT104/masks/SBT104_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT119",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT119/image/SBT119_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT119/masks/SBT119_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT119/masks/SBT119_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT119/masks/SBT119_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT119/masks/SBT119_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT101",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT101/image/SBT101_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT101/masks/SBT101_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT101/masks/SBT101_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT101/masks/SBT101_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT101/masks/SBT101_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT032",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT032/image/SBT032_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT032/masks/SBT032_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT032/masks/SBT032_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT032/masks/SBT032_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT032/masks/SBT032_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT189",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT189/image/SBT189_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT189/masks/SBT189_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT189/masks/SBT189_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT189/masks/SBT189_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT189/masks/SBT189_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT121",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT121/image/SBT121_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT121/masks/SBT121_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT121/masks/SBT121_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT121/masks/SBT121_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT121/masks/SBT121_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT074",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT074/image/SBT074_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT074/masks/SBT074_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT074/masks/SBT074_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT074/masks/SBT074_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT074/masks/SBT074_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT291",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT291/image/SBT291_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT291/masks/SBT291_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT291/masks/SBT291_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT291/masks/SBT291_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT291/masks/SBT291_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT220",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT220/image/SBT220_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT220/masks/SBT220_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT220/masks/SBT220_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT220/masks/SBT220_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT220/masks/SBT220_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT212",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT212/image/SBT212_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT212/masks/SBT212_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT212/masks/SBT212_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT212/masks/SBT212_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT212/masks/SBT212_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT286",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT286/image/SBT286_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT286/masks/SBT286_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT286/masks/SBT286_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT286/masks/SBT286_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT286/masks/SBT286_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT070",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT070/image/SBT070_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT070/masks/SBT070_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT070/masks/SBT070_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT070/masks/SBT070_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT070/masks/SBT070_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT210",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT210/image/SBT210_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT210/masks/SBT210_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT210/masks/SBT210_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT210/masks/SBT210_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT210/masks/SBT210_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT269",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT269/image/SBT269_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT269/masks/SBT269_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT269/masks/SBT269_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT269/masks/SBT269_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT269/masks/SBT269_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT341",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT341/image/SBT341_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT341/masks/SBT341_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT341/masks/SBT341_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT341/masks/SBT341_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT341/masks/SBT341_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT061",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT061/image/SBT061_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT061/masks/SBT061_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT061/masks/SBT061_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT061/masks/SBT061_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT061/masks/SBT061_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT207",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT207/image/SBT207_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT207/masks/SBT207_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT207/masks/SBT207_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT207/masks/SBT207_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT207/masks/SBT207_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT085",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT085/image/SBT085_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT085/masks/SBT085_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT085/masks/SBT085_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT085/masks/SBT085_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT085/masks/SBT085_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT009",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT009/image/SBT009_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT009/masks/SBT009_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT009/masks/SBT009_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT009/masks/SBT009_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT009/masks/SBT009_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT166",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT166/image/SBT166_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT166/masks/SBT166_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT166/masks/SBT166_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT166/masks/SBT166_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT166/masks/SBT166_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT140",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT140/image/SBT140_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT140/masks/SBT140_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT140/masks/SBT140_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT140/masks/SBT140_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT140/masks/SBT140_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT334",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT334/image/SBT334_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT334/masks/SBT334_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT334/masks/SBT334_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT334/masks/SBT334_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT334/masks/SBT334_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT019",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT019/image/SBT019_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT019/masks/SBT019_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT019/masks/SBT019_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT019/masks/SBT019_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT019/masks/SBT019_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT002",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT002/image/SBT002_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT002/masks/SBT002_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT002/masks/SBT002_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT002/masks/SBT002_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT002/masks/SBT002_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT240",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT240/image/SBT240_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT240/masks/SBT240_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT240/masks/SBT240_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT240/masks/SBT240_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT240/masks/SBT240_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT059",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT059/image/SBT059_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT059/masks/SBT059_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT059/masks/SBT059_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT059/masks/SBT059_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT059/masks/SBT059_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT006",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT006/image/SBT006_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT006/masks/SBT006_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT006/masks/SBT006_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT006/masks/SBT006_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT006/masks/SBT006_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT087",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT087/image/SBT087_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT087/masks/SBT087_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT087/masks/SBT087_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT087/masks/SBT087_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT087/masks/SBT087_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT224",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT224/image/SBT224_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT224/masks/SBT224_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT224/masks/SBT224_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT224/masks/SBT224_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT224/masks/SBT224_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT346",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT346/image/SBT346_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT346/masks/SBT346_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT346/masks/SBT346_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT346/masks/SBT346_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT346/masks/SBT346_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT252",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT252/image/SBT252_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT252/masks/SBT252_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT252/masks/SBT252_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT252/masks/SBT252_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT252/masks/SBT252_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT031",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT031/image/SBT031_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT031/masks/SBT031_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT031/masks/SBT031_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT031/masks/SBT031_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT031/masks/SBT031_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT116",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT116/image/SBT116_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT116/masks/SBT116_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT116/masks/SBT116_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT116/masks/SBT116_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT116/masks/SBT116_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT133",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT133/image/SBT133_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT133/masks/SBT133_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT133/masks/SBT133_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT133/masks/SBT133_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT133/masks/SBT133_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT270",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT270/image/SBT270_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT270/masks/SBT270_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT270/masks/SBT270_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT270/masks/SBT270_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT270/masks/SBT270_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT198",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT198/image/SBT198_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT198/masks/SBT198_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT198/masks/SBT198_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT198/masks/SBT198_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT198/masks/SBT198_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT242",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT242/image/SBT242_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT242/masks/SBT242_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT242/masks/SBT242_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT242/masks/SBT242_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT242/masks/SBT242_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT314",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT314/image/SBT314_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT314/masks/SBT314_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT314/masks/SBT314_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT314/masks/SBT314_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT314/masks/SBT314_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT327",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT327/image/SBT327_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT327/masks/SBT327_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT327/masks/SBT327_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT327/masks/SBT327_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT327/masks/SBT327_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT183",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT183/image/SBT183_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT183/masks/SBT183_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT183/masks/SBT183_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT183/masks/SBT183_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT183/masks/SBT183_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT055",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT055/image/SBT055_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT055/masks/SBT055_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT055/masks/SBT055_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT055/masks/SBT055_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT055/masks/SBT055_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT226",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT226/image/SBT226_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT226/masks/SBT226_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT226/masks/SBT226_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT226/masks/SBT226_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT226/masks/SBT226_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT188",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT188/image/SBT188_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT188/masks/SBT188_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT188/masks/SBT188_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT188/masks/SBT188_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT188/masks/SBT188_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT281",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT281/image/SBT281_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT281/masks/SBT281_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT281/masks/SBT281_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT281/masks/SBT281_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT281/masks/SBT281_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT208",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT208/image/SBT208_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT208/masks/SBT208_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT208/masks/SBT208_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT208/masks/SBT208_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT208/masks/SBT208_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT043",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT043/image/SBT043_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT043/masks/SBT043_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT043/masks/SBT043_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT043/masks/SBT043_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT043/masks/SBT043_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT344",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT344/image/SBT344_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT344/masks/SBT344_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT344/masks/SBT344_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT344/masks/SBT344_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT344/masks/SBT344_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT122",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT122/image/SBT122_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT122/masks/SBT122_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT122/masks/SBT122_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT122/masks/SBT122_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT122/masks/SBT122_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT282",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT282/image/SBT282_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT282/masks/SBT282_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT282/masks/SBT282_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT282/masks/SBT282_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT282/masks/SBT282_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT033",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT033/image/SBT033_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT033/masks/SBT033_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT033/masks/SBT033_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT033/masks/SBT033_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT033/masks/SBT033_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT279",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT279/image/SBT279_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT279/masks/SBT279_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT279/masks/SBT279_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT279/masks/SBT279_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT279/masks/SBT279_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT018",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT018/image/SBT018_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT018/masks/SBT018_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT018/masks/SBT018_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT018/masks/SBT018_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT018/masks/SBT018_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT125",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT125/image/SBT125_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT125/masks/SBT125_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT125/masks/SBT125_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT125/masks/SBT125_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT125/masks/SBT125_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT022",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT022/image/SBT022_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT022/masks/SBT022_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT022/masks/SBT022_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT022/masks/SBT022_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT022/masks/SBT022_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT021",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT021/image/SBT021_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT021/masks/SBT021_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT021/masks/SBT021_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT021/masks/SBT021_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT021/masks/SBT021_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT146",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT146/image/SBT146_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT146/masks/SBT146_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT146/masks/SBT146_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT146/masks/SBT146_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT146/masks/SBT146_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT312",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT312/image/SBT312_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT312/masks/SBT312_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT312/masks/SBT312_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT312/masks/SBT312_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT312/masks/SBT312_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT015",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT015/image/SBT015_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT015/masks/SBT015_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT015/masks/SBT015_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT015/masks/SBT015_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT015/masks/SBT015_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT062",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT062/image/SBT062_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT062/masks/SBT062_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT062/masks/SBT062_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT062/masks/SBT062_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT062/masks/SBT062_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT079",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT079/image/SBT079_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT079/masks/SBT079_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT079/masks/SBT079_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT079/masks/SBT079_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT079/masks/SBT079_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT241",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT241/image/SBT241_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT241/masks/SBT241_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT241/masks/SBT241_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT241/masks/SBT241_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT241/masks/SBT241_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT205",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT205/image/SBT205_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT205/masks/SBT205_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT205/masks/SBT205_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT205/masks/SBT205_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT205/masks/SBT205_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT005",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT005/image/SBT005_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT005/masks/SBT005_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT005/masks/SBT005_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT005/masks/SBT005_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT005/masks/SBT005_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT321",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT321/image/SBT321_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT321/masks/SBT321_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT321/masks/SBT321_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT321/masks/SBT321_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT321/masks/SBT321_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT083",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT083/image/SBT083_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT083/masks/SBT083_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT083/masks/SBT083_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT083/masks/SBT083_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT083/masks/SBT083_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT154",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT154/image/SBT154_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT154/masks/SBT154_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT154/masks/SBT154_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT154/masks/SBT154_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT154/masks/SBT154_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT200",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT200/image/SBT200_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT200/masks/SBT200_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT200/masks/SBT200_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT200/masks/SBT200_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT200/masks/SBT200_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT219",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT219/image/SBT219_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT219/masks/SBT219_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT219/masks/SBT219_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT219/masks/SBT219_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT219/masks/SBT219_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT271",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT271/image/SBT271_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT271/masks/SBT271_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT271/masks/SBT271_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT271/masks/SBT271_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT271/masks/SBT271_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT042",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT042/image/SBT042_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT042/masks/SBT042_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT042/masks/SBT042_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT042/masks/SBT042_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT042/masks/SBT042_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT096",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT096/image/SBT096_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT096/masks/SBT096_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT096/masks/SBT096_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT096/masks/SBT096_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT096/masks/SBT096_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT231",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT231/image/SBT231_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT231/masks/SBT231_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT231/masks/SBT231_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT231/masks/SBT231_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT231/masks/SBT231_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT051",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT051/image/SBT051_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT051/masks/SBT051_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT051/masks/SBT051_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT051/masks/SBT051_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT051/masks/SBT051_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT156",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT156/image/SBT156_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT156/masks/SBT156_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT156/masks/SBT156_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT156/masks/SBT156_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT156/masks/SBT156_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT258",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT258/image/SBT258_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT258/masks/SBT258_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT258/masks/SBT258_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT258/masks/SBT258_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT258/masks/SBT258_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT164",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT164/image/SBT164_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT164/masks/SBT164_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT164/masks/SBT164_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT164/masks/SBT164_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT164/masks/SBT164_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT077",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT077/image/SBT077_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT077/masks/SBT077_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT077/masks/SBT077_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT077/masks/SBT077_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT077/masks/SBT077_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT244",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT244/image/SBT244_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT244/masks/SBT244_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT244/masks/SBT244_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT244/masks/SBT244_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT244/masks/SBT244_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT028",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT028/image/SBT028_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT028/masks/SBT028_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT028/masks/SBT028_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT028/masks/SBT028_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT028/masks/SBT028_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT130",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT130/image/SBT130_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT130/masks/SBT130_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT130/masks/SBT130_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT130/masks/SBT130_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT130/masks/SBT130_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT046",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT046/image/SBT046_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT046/masks/SBT046_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT046/masks/SBT046_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT046/masks/SBT046_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT046/masks/SBT046_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT129",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT129/image/SBT129_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT129/masks/SBT129_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT129/masks/SBT129_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT129/masks/SBT129_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT129/masks/SBT129_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT248",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT248/image/SBT248_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT248/masks/SBT248_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT248/masks/SBT248_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT248/masks/SBT248_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT248/masks/SBT248_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT199",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT199/image/SBT199_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT199/masks/SBT199_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT199/masks/SBT199_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT199/masks/SBT199_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT199/masks/SBT199_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT214",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT214/image/SBT214_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT214/masks/SBT214_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT214/masks/SBT214_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT214/masks/SBT214_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT214/masks/SBT214_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT001",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT001/image/SBT001_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT001/masks/SBT001_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT001/masks/SBT001_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT001/masks/SBT001_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT001/masks/SBT001_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT292",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT292/image/SBT292_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT292/masks/SBT292_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT292/masks/SBT292_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT292/masks/SBT292_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT292/masks/SBT292_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT229",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT229/image/SBT229_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT229/masks/SBT229_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT229/masks/SBT229_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT229/masks/SBT229_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT229/masks/SBT229_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT332",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT332/image/SBT332_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT332/masks/SBT332_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT332/masks/SBT332_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT332/masks/SBT332_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT332/masks/SBT332_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT076",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT076/image/SBT076_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT076/masks/SBT076_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT076/masks/SBT076_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT076/masks/SBT076_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT076/masks/SBT076_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT232",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT232/image/SBT232_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT232/masks/SBT232_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT232/masks/SBT232_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT232/masks/SBT232_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT232/masks/SBT232_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT277",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT277/image/SBT277_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT277/masks/SBT277_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT277/masks/SBT277_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT277/masks/SBT277_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT277/masks/SBT277_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT165",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT165/image/SBT165_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT165/masks/SBT165_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT165/masks/SBT165_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT165/masks/SBT165_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT165/masks/SBT165_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT197",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT197/image/SBT197_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT197/masks/SBT197_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT197/masks/SBT197_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT197/masks/SBT197_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT197/masks/SBT197_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT069",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT069/image/SBT069_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT069/masks/SBT069_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT069/masks/SBT069_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT069/masks/SBT069_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT069/masks/SBT069_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT193",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT193/image/SBT193_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT193/masks/SBT193_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT193/masks/SBT193_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT193/masks/SBT193_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT193/masks/SBT193_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT249",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT249/image/SBT249_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT249/masks/SBT249_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT249/masks/SBT249_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT249/masks/SBT249_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT249/masks/SBT249_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT324",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT324/image/SBT324_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT324/masks/SBT324_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT324/masks/SBT324_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT324/masks/SBT324_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT324/masks/SBT324_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT030",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT030/image/SBT030_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT030/masks/SBT030_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT030/masks/SBT030_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT030/masks/SBT030_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT030/masks/SBT030_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT185",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT185/image/SBT185_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT185/masks/SBT185_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT185/masks/SBT185_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT185/masks/SBT185_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT185/masks/SBT185_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT227",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT227/image/SBT227_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT227/masks/SBT227_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT227/masks/SBT227_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT227/masks/SBT227_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT227/masks/SBT227_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT003",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT003/image/SBT003_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT003/masks/SBT003_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT003/masks/SBT003_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT003/masks/SBT003_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT003/masks/SBT003_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT142",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT142/image/SBT142_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT142/masks/SBT142_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT142/masks/SBT142_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT142/masks/SBT142_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT142/masks/SBT142_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT065",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT065/image/SBT065_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT065/masks/SBT065_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT065/masks/SBT065_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT065/masks/SBT065_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT065/masks/SBT065_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT305",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT305/image/SBT305_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT305/masks/SBT305_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT305/masks/SBT305_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT305/masks/SBT305_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT305/masks/SBT305_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT289",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT289/image/SBT289_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT289/masks/SBT289_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT289/masks/SBT289_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT289/masks/SBT289_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT289/masks/SBT289_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT225",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT225/image/SBT225_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT225/masks/SBT225_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT225/masks/SBT225_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT225/masks/SBT225_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT225/masks/SBT225_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT098",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT098/image/SBT098_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT098/masks/SBT098_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT098/masks/SBT098_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT098/masks/SBT098_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT098/masks/SBT098_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT295",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT295/image/SBT295_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT295/masks/SBT295_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT295/masks/SBT295_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT295/masks/SBT295_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT295/masks/SBT295_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT266",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT266/image/SBT266_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT266/masks/SBT266_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT266/masks/SBT266_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT266/masks/SBT266_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT266/masks/SBT266_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT153",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT153/image/SBT153_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT153/masks/SBT153_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT153/masks/SBT153_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT153/masks/SBT153_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT153/masks/SBT153_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT330",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT330/image/SBT330_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT330/masks/SBT330_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT330/masks/SBT330_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT330/masks/SBT330_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT330/masks/SBT330_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT316",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT316/image/SBT316_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT316/masks/SBT316_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT316/masks/SBT316_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT316/masks/SBT316_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT316/masks/SBT316_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT257",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT257/image/SBT257_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT257/masks/SBT257_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT257/masks/SBT257_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT257/masks/SBT257_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT257/masks/SBT257_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT290",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT290/image/SBT290_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT290/masks/SBT290_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT290/masks/SBT290_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT290/masks/SBT290_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT290/masks/SBT290_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT161",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT161/image/SBT161_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT161/masks/SBT161_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT161/masks/SBT161_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT161/masks/SBT161_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT161/masks/SBT161_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT040",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT040/image/SBT040_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT040/masks/SBT040_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT040/masks/SBT040_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT040/masks/SBT040_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT040/masks/SBT040_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT268",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT268/image/SBT268_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT268/masks/SBT268_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT268/masks/SBT268_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT268/masks/SBT268_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT268/masks/SBT268_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT221",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT221/image/SBT221_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT221/masks/SBT221_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT221/masks/SBT221_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT221/masks/SBT221_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT221/masks/SBT221_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT345",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT345/image/SBT345_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT345/masks/SBT345_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT345/masks/SBT345_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT345/masks/SBT345_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT345/masks/SBT345_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT300",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT300/image/SBT300_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT300/masks/SBT300_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT300/masks/SBT300_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT300/masks/SBT300_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT300/masks/SBT300_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT293",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT293/image/SBT293_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT293/masks/SBT293_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT293/masks/SBT293_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT293/masks/SBT293_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT293/masks/SBT293_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT127",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT127/image/SBT127_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT127/masks/SBT127_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT127/masks/SBT127_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT127/masks/SBT127_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT127/masks/SBT127_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT131",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT131/image/SBT131_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT131/masks/SBT131_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT131/masks/SBT131_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT131/masks/SBT131_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT131/masks/SBT131_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT253",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT253/image/SBT253_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT253/masks/SBT253_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT253/masks/SBT253_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT253/masks/SBT253_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT253/masks/SBT253_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT057",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT057/image/SBT057_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT057/masks/SBT057_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT057/masks/SBT057_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT057/masks/SBT057_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT057/masks/SBT057_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT093",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT093/image/SBT093_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT093/masks/SBT093_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT093/masks/SBT093_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT093/masks/SBT093_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT093/masks/SBT093_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT103",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT103/image/SBT103_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT103/masks/SBT103_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT103/masks/SBT103_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT103/masks/SBT103_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT103/masks/SBT103_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT246",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT246/image/SBT246_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT246/masks/SBT246_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT246/masks/SBT246_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT246/masks/SBT246_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT246/masks/SBT246_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT322",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT322/image/SBT322_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT322/masks/SBT322_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT322/masks/SBT322_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT322/masks/SBT322_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT322/masks/SBT322_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT110",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT110/image/SBT110_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT110/masks/SBT110_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT110/masks/SBT110_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT110/masks/SBT110_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT110/masks/SBT110_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT150",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT150/image/SBT150_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT150/masks/SBT150_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT150/masks/SBT150_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT150/masks/SBT150_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT150/masks/SBT150_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT192",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT192/image/SBT192_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT192/masks/SBT192_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT192/masks/SBT192_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT192/masks/SBT192_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT192/masks/SBT192_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT254",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT254/image/SBT254_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT254/masks/SBT254_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT254/masks/SBT254_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT254/masks/SBT254_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT254/masks/SBT254_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT263",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT263/image/SBT263_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT263/masks/SBT263_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT263/masks/SBT263_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT263/masks/SBT263_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT263/masks/SBT263_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT144",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT144/image/SBT144_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT144/masks/SBT144_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT144/masks/SBT144_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT144/masks/SBT144_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT144/masks/SBT144_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT191",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT191/image/SBT191_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT191/masks/SBT191_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT191/masks/SBT191_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT191/masks/SBT191_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT191/masks/SBT191_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT301",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT301/image/SBT301_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT301/masks/SBT301_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT301/masks/SBT301_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT301/masks/SBT301_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT301/masks/SBT301_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT294",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT294/image/SBT294_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT294/masks/SBT294_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT294/masks/SBT294_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT294/masks/SBT294_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT294/masks/SBT294_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT068",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT068/image/SBT068_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT068/masks/SBT068_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT068/masks/SBT068_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT068/masks/SBT068_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT068/masks/SBT068_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT278",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT278/image/SBT278_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT278/masks/SBT278_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT278/masks/SBT278_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT278/masks/SBT278_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT278/masks/SBT278_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT235",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT235/image/SBT235_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT235/masks/SBT235_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT235/masks/SBT235_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT235/masks/SBT235_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT235/masks/SBT235_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT203",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT203/image/SBT203_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT203/masks/SBT203_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT203/masks/SBT203_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT203/masks/SBT203_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT203/masks/SBT203_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT256",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT256/image/SBT256_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT256/masks/SBT256_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT256/masks/SBT256_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT256/masks/SBT256_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT256/masks/SBT256_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT261",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT261/image/SBT261_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT261/masks/SBT261_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT261/masks/SBT261_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT261/masks/SBT261_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT261/masks/SBT261_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT265",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT265/image/SBT265_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT265/masks/SBT265_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT265/masks/SBT265_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT265/masks/SBT265_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT265/masks/SBT265_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT109",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT109/image/SBT109_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT109/masks/SBT109_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT109/masks/SBT109_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT109/masks/SBT109_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT109/masks/SBT109_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT034",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT034/image/SBT034_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT034/masks/SBT034_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT034/masks/SBT034_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT034/masks/SBT034_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT034/masks/SBT034_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT138",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT138/image/SBT138_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT138/masks/SBT138_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT138/masks/SBT138_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT138/masks/SBT138_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT138/masks/SBT138_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT206",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT206/image/SBT206_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT206/masks/SBT206_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT206/masks/SBT206_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT206/masks/SBT206_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT206/masks/SBT206_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT162",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT162/image/SBT162_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT162/masks/SBT162_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT162/masks/SBT162_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT162/masks/SBT162_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT162/masks/SBT162_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT335",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT335/image/SBT335_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT335/masks/SBT335_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT335/masks/SBT335_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT335/masks/SBT335_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT335/masks/SBT335_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT118",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT118/image/SBT118_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT118/masks/SBT118_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT118/masks/SBT118_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT118/masks/SBT118_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT118/masks/SBT118_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT029",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT029/image/SBT029_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT029/masks/SBT029_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT029/masks/SBT029_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT029/masks/SBT029_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT029/masks/SBT029_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT167",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT167/image/SBT167_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT167/masks/SBT167_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT167/masks/SBT167_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT167/masks/SBT167_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT167/masks/SBT167_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT323",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT323/image/SBT323_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT323/masks/SBT323_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT323/masks/SBT323_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT323/masks/SBT323_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT323/masks/SBT323_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT139",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT139/image/SBT139_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT139/masks/SBT139_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT139/masks/SBT139_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT139/masks/SBT139_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT139/masks/SBT139_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT287",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT287/image/SBT287_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT287/masks/SBT287_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT287/masks/SBT287_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT287/masks/SBT287_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT287/masks/SBT287_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT237",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT237/image/SBT237_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT237/masks/SBT237_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT237/masks/SBT237_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT237/masks/SBT237_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT237/masks/SBT237_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT298",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT298/image/SBT298_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT298/masks/SBT298_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT298/masks/SBT298_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT298/masks/SBT298_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT298/masks/SBT298_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT343",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT343/image/SBT343_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT343/masks/SBT343_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT343/masks/SBT343_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT343/masks/SBT343_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT343/masks/SBT343_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT274",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT274/image/SBT274_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT274/masks/SBT274_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT274/masks/SBT274_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT274/masks/SBT274_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT274/masks/SBT274_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT088",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT088/image/SBT088_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT088/masks/SBT088_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT088/masks/SBT088_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT088/masks/SBT088_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT088/masks/SBT088_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT037",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT037/image/SBT037_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT037/masks/SBT037_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT037/masks/SBT037_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT037/masks/SBT037_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT037/masks/SBT037_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT137",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT137/image/SBT137_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT137/masks/SBT137_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT137/masks/SBT137_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT137/masks/SBT137_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT137/masks/SBT137_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT108",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT108/image/SBT108_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT108/masks/SBT108_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT108/masks/SBT108_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT108/masks/SBT108_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT108/masks/SBT108_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT182",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT182/image/SBT182_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT182/masks/SBT182_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT182/masks/SBT182_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT182/masks/SBT182_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT182/masks/SBT182_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT190",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT190/image/SBT190_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT190/masks/SBT190_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT190/masks/SBT190_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT190/masks/SBT190_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT190/masks/SBT190_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT084",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT084/image/SBT084_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT084/masks/SBT084_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT084/masks/SBT084_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT084/masks/SBT084_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT084/masks/SBT084_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT187",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT187/image/SBT187_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT187/masks/SBT187_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT187/masks/SBT187_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT187/masks/SBT187_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT187/masks/SBT187_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT233",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT233/image/SBT233_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT233/masks/SBT233_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT233/masks/SBT233_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT233/masks/SBT233_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT233/masks/SBT233_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT315",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT315/image/SBT315_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT315/masks/SBT315_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT315/masks/SBT315_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT315/masks/SBT315_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT315/masks/SBT315_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT329",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT329/image/SBT329_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT329/masks/SBT329_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT329/masks/SBT329_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT329/masks/SBT329_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT329/masks/SBT329_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT052",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT052/image/SBT052_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT052/masks/SBT052_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT052/masks/SBT052_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT052/masks/SBT052_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT052/masks/SBT052_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT331",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT331/image/SBT331_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT331/masks/SBT331_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT331/masks/SBT331_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT331/masks/SBT331_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT331/masks/SBT331_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT299",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT299/image/SBT299_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT299/masks/SBT299_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT299/masks/SBT299_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT299/masks/SBT299_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT299/masks/SBT299_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT149",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT149/image/SBT149_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT149/masks/SBT149_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT149/masks/SBT149_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT149/masks/SBT149_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT149/masks/SBT149_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT117",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT117/image/SBT117_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT117/masks/SBT117_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT117/masks/SBT117_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT117/masks/SBT117_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT117/masks/SBT117_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT024",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT024/image/SBT024_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT024/masks/SBT024_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT024/masks/SBT024_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT024/masks/SBT024_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT024/masks/SBT024_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT036",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT036/image/SBT036_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT036/masks/SBT036_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT036/masks/SBT036_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT036/masks/SBT036_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT036/masks/SBT036_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT099",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT099/image/SBT099_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT099/masks/SBT099_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT099/masks/SBT099_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT099/masks/SBT099_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT099/masks/SBT099_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT186",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT186/image/SBT186_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT186/masks/SBT186_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT186/masks/SBT186_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT186/masks/SBT186_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT186/masks/SBT186_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT151",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT151/image/SBT151_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT151/masks/SBT151_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT151/masks/SBT151_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT151/masks/SBT151_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT151/masks/SBT151_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT283",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT283/image/SBT283_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT283/masks/SBT283_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT283/masks/SBT283_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT283/masks/SBT283_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT283/masks/SBT283_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT041",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT041/image/SBT041_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT041/masks/SBT041_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT041/masks/SBT041_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT041/masks/SBT041_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT041/masks/SBT041_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT194",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT194/image/SBT194_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT194/masks/SBT194_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT194/masks/SBT194_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT194/masks/SBT194_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT194/masks/SBT194_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT064",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT064/image/SBT064_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT064/masks/SBT064_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT064/masks/SBT064_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT064/masks/SBT064_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT064/masks/SBT064_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT275",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT275/image/SBT275_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT275/masks/SBT275_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT275/masks/SBT275_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT275/masks/SBT275_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT275/masks/SBT275_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT236",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT236/image/SBT236_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT236/masks/SBT236_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT236/masks/SBT236_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT236/masks/SBT236_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT236/masks/SBT236_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT023",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT023/image/SBT023_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT023/masks/SBT023_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT023/masks/SBT023_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT023/masks/SBT023_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT023/masks/SBT023_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT136",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT136/image/SBT136_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT136/masks/SBT136_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT136/masks/SBT136_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT136/masks/SBT136_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT136/masks/SBT136_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT177",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT177/image/SBT177_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT177/masks/SBT177_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT177/masks/SBT177_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT177/masks/SBT177_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT177/masks/SBT177_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT184",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT184/image/SBT184_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT184/masks/SBT184_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT184/masks/SBT184_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT184/masks/SBT184_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT184/masks/SBT184_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT050",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT050/image/SBT050_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT050/masks/SBT050_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT050/masks/SBT050_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT050/masks/SBT050_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT050/masks/SBT050_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT195",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT195/image/SBT195_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT195/masks/SBT195_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT195/masks/SBT195_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT195/masks/SBT195_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT195/masks/SBT195_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT333",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT333/image/SBT333_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT333/masks/SBT333_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT333/masks/SBT333_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT333/masks/SBT333_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT333/masks/SBT333_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT340",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT340/image/SBT340_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT340/masks/SBT340_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT340/masks/SBT340_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT340/masks/SBT340_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT340/masks/SBT340_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT173",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT173/image/SBT173_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT173/masks/SBT173_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT173/masks/SBT173_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT173/masks/SBT173_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT173/masks/SBT173_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT111",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT111/image/SBT111_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT111/masks/SBT111_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT111/masks/SBT111_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT111/masks/SBT111_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT111/masks/SBT111_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT080",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT080/image/SBT080_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT080/masks/SBT080_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT080/masks/SBT080_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT080/masks/SBT080_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT080/masks/SBT080_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT320",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT320/image/SBT320_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT320/masks/SBT320_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT320/masks/SBT320_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT320/masks/SBT320_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT320/masks/SBT320_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT175",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT175/image/SBT175_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT175/masks/SBT175_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT175/masks/SBT175_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT175/masks/SBT175_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT175/masks/SBT175_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT336",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT336/image/SBT336_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT336/masks/SBT336_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT336/masks/SBT336_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT336/masks/SBT336_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT336/masks/SBT336_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT082",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT082/image/SBT082_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT082/masks/SBT082_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT082/masks/SBT082_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT082/masks/SBT082_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT082/masks/SBT082_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT004",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT004/image/SBT004_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT004/masks/SBT004_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT004/masks/SBT004_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT004/masks/SBT004_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT004/masks/SBT004_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT143",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT143/image/SBT143_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT143/masks/SBT143_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT143/masks/SBT143_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT143/masks/SBT143_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT143/masks/SBT143_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT302",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT302/image/SBT302_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT302/masks/SBT302_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT302/masks/SBT302_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT302/masks/SBT302_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT302/masks/SBT302_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT230",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT230/image/SBT230_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT230/masks/SBT230_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT230/masks/SBT230_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT230/masks/SBT230_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT230/masks/SBT230_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT113",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT113/image/SBT113_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT113/masks/SBT113_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT113/masks/SBT113_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT113/masks/SBT113_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT113/masks/SBT113_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT215",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT215/image/SBT215_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT215/masks/SBT215_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT215/masks/SBT215_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT215/masks/SBT215_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT215/masks/SBT215_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT339",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT339/image/SBT339_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT339/masks/SBT339_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT339/masks/SBT339_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT339/masks/SBT339_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT339/masks/SBT339_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT102",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT102/image/SBT102_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT102/masks/SBT102_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT102/masks/SBT102_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT102/masks/SBT102_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT102/masks/SBT102_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT288",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT288/image/SBT288_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT288/masks/SBT288_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT288/masks/SBT288_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT288/masks/SBT288_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT288/masks/SBT288_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT014",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT014/image/SBT014_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT014/masks/SBT014_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT014/masks/SBT014_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT014/masks/SBT014_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT014/masks/SBT014_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT309",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT309/image/SBT309_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT309/masks/SBT309_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT309/masks/SBT309_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT309/masks/SBT309_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT309/masks/SBT309_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT259",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT259/image/SBT259_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT259/masks/SBT259_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT259/masks/SBT259_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT259/masks/SBT259_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT259/masks/SBT259_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT120",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT120/image/SBT120_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT120/masks/SBT120_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT120/masks/SBT120_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT120/masks/SBT120_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT120/masks/SBT120_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT112",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT112/image/SBT112_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT112/masks/SBT112_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT112/masks/SBT112_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT112/masks/SBT112_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT112/masks/SBT112_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT048",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT048/image/SBT048_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT048/masks/SBT048_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT048/masks/SBT048_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT048/masks/SBT048_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT048/masks/SBT048_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT016",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT016/image/SBT016_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT016/masks/SBT016_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT016/masks/SBT016_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT016/masks/SBT016_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT016/masks/SBT016_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT017",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT017/image/SBT017_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT017/masks/SBT017_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT017/masks/SBT017_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT017/masks/SBT017_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT017/masks/SBT017_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT217",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT217/image/SBT217_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT217/masks/SBT217_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT217/masks/SBT217_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT217/masks/SBT217_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT217/masks/SBT217_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT303",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT303/image/SBT303_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT303/masks/SBT303_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT303/masks/SBT303_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT303/masks/SBT303_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT303/masks/SBT303_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT045",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT045/image/SBT045_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT045/masks/SBT045_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT045/masks/SBT045_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT045/masks/SBT045_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT045/masks/SBT045_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT280",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT280/image/SBT280_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT280/masks/SBT280_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT280/masks/SBT280_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT280/masks/SBT280_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT280/masks/SBT280_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT053",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT053/image/SBT053_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT053/masks/SBT053_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT053/masks/SBT053_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT053/masks/SBT053_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT053/masks/SBT053_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT072",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT072/image/SBT072_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT072/masks/SBT072_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT072/masks/SBT072_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT072/masks/SBT072_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT072/masks/SBT072_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT115",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT115/image/SBT115_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT115/masks/SBT115_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT115/masks/SBT115_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT115/masks/SBT115_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT115/masks/SBT115_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT126",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT126/image/SBT126_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT126/masks/SBT126_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT126/masks/SBT126_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT126/masks/SBT126_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT126/masks/SBT126_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT141",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT141/image/SBT141_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT141/masks/SBT141_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT141/masks/SBT141_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT141/masks/SBT141_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT141/masks/SBT141_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT013",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT013/image/SBT013_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT013/masks/SBT013_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT013/masks/SBT013_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT013/masks/SBT013_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT013/masks/SBT013_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT058",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT058/image/SBT058_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT058/masks/SBT058_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT058/masks/SBT058_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT058/masks/SBT058_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT058/masks/SBT058_R_MF.nii.gz"
+  },
+  {
+    "sid": "SBT328",
+    "image": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT328/image/SBT328_image.nii.gz",
+    "L_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT328/masks/SBT328_L_ES.nii.gz",
+    "R_ES": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT328/masks/SBT328_R_ES.nii.gz",
+    "L_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT328/masks/SBT328_L_MF.nii.gz",
+    "R_MF": "/scratch/gpfs/sk2415/ml/disjoint_all/SBT328/masks/SBT328_R_MF.nii.gz"
+  }
+]
