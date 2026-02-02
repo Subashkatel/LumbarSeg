@@ -44,7 +44,7 @@ conda activate lumbarseg
 # For CUDA (Linux/Windows with NVIDIA GPU):
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# For Mac (CPU or MPS):
+# For Mac (CPU - MPS not supported by nnU-Net):
 pip install torch torchvision
 
 # Install LumbarSeg

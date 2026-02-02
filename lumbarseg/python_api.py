@@ -13,6 +13,7 @@ import sys
 import shutil
 import tempfile
 import subprocess
+import time
 from pathlib import Path
 from typing import Optional, Union, List
 
@@ -97,6 +98,43 @@ def check_weights_exist() -> bool:
     return False
 
 
+def _download_with_progress(url: str, dest: Path, desc: str = "Downloading"):
+    """Download a file with progress bar."""
+    import urllib.request
+
+    # Get file size
+    try:
+        with urllib.request.urlopen(url) as response:
+            total_size = int(response.headers.get('content-length', 0))
+    except Exception:
+        total_size = 0
+
+    # Download with progress
+    downloaded = 0
+    block_size = 8192
+
+    with urllib.request.urlopen(url) as response:
+        with open(dest, 'wb') as out_file:
+            while True:
+                buffer = response.read(block_size)
+                if not buffer:
+                    break
+                out_file.write(buffer)
+                downloaded += len(buffer)
+
+                if total_size > 0:
+                    percent = downloaded * 100 / total_size
+                    mb_downloaded = downloaded / (1024 * 1024)
+                    mb_total = total_size / (1024 * 1024)
+                    bar_length = 30
+                    filled = int(bar_length * downloaded / total_size)
+                    bar = '=' * filled + '-' * (bar_length - filled)
+                    print(f"\r  {desc}: [{bar}] {percent:5.1f}% ({mb_downloaded:.1f}/{mb_total:.1f} MB)", end='', flush=True)
+
+    if total_size > 0:
+        print()  # New line after progress bar
+
+
 def download_weights(verbose: bool = True):
     """
     Download pre-trained model weights from GitHub releases.
@@ -107,7 +145,7 @@ def download_weights(verbose: bool = True):
 
     if verbose:
         print("Downloading LumbarSeg model weights...")
-        print("This only needs to be done once.")
+        print("This only needs to be done once (~1.2 GB total).")
 
     results_dir = get_nnunet_results_dir()
 
@@ -125,14 +163,14 @@ def download_weights(verbose: bool = True):
 
         url = f"https://github.com/{GITHUB_REPO}/releases/download/{RELEASE_TAG}/{filename}"
 
-        if verbose:
-            print(f"  Downloading {fold_name}...")
-
         try:
-            import urllib.request
-            urllib.request.urlretrieve(url, checkpoint_path)
+            if verbose:
+                _download_with_progress(url, checkpoint_path, fold_name)
+            else:
+                import urllib.request
+                urllib.request.urlretrieve(url, checkpoint_path)
         except Exception as e:
-            print(f"Error downloading {fold_name}: {e}")
+            print(f"\nError downloading {fold_name}: {e}")
             print(f"Please download manually from: {url}")
             print(f"And place in: {checkpoint_path}")
             raise
@@ -192,13 +230,19 @@ def validate_input(input_path: Path, verbose: bool = True) -> bool:
 
 
 def detect_device() -> str:
-    """Auto-detect best available device (GPU or CPU)."""
+    """Auto-detect best available device (GPU or CPU).
+
+    Note: MPS (Apple Silicon) is not used because nnU-Net v2 has
+    incomplete MPS support and can hang indefinitely. CPU is used
+    instead on Mac, which is slower but reliable.
+    """
     try:
         import torch
         if torch.cuda.is_available():
             return "cuda"
-        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-            return "mps"
+        # Note: MPS disabled - nnU-Net hangs with MPS device
+        # elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        #     return "mps"
     except ImportError:
         pass
     return "cpu"
@@ -251,6 +295,8 @@ def segment(
     input_path = Path(input).absolute()
     output_path = Path(output).absolute()
 
+    total_start = time.time()
+
     if verbose:
         print("=" * 60)
         print("LumbarSeg - Lumbar Paraspinal Muscle Segmentation")
@@ -268,7 +314,10 @@ def segment(
     if not check_weights_exist():
         if verbose:
             print("\nModel weights not found. Downloading...")
+        download_start = time.time()
         download_weights(verbose)
+        if verbose:
+            print(f"  Download time: {time.time() - download_start:.1f}s")
 
     # Detect device
     if device is None:
@@ -291,6 +340,7 @@ def segment(
     if verbose:
         print("\nRunning inference...")
 
+    inference_start = time.time()
     _run_nnunet_inference(
         input_path=input_path,
         output_path=output_path,
@@ -299,9 +349,15 @@ def segment(
         save_probabilities=save_probabilities,
         verbose=verbose,
     )
+    inference_time = time.time() - inference_start
+
+    total_time = time.time() - total_start
 
     if verbose:
         print(f"\nSegmentation saved to: {output_path}")
+        print(f"\nTiming:")
+        print(f"  Inference: {inference_time:.1f}s")
+        print(f"  Total: {total_time:.1f}s")
         print("\nOutput labels:")
         for label_id, label_name in LABELS.items():
             print(f"  {label_id}: {label_name}")
@@ -388,18 +444,27 @@ def _run_nnunet_inference(
             cmd.append("--disable_progress_bar")
 
         # Run inference
+        # Note: Using subprocess.run() instead of Popen to avoid hanging on Mac.
+        # The Popen approach with line-buffered reading hangs because tqdm progress
+        # bars use \r (carriage return) without newlines.
         try:
             result = subprocess.run(
                 cmd,
-                check=True,
                 capture_output=True,
                 text=True,
             )
-            # Filter and print output (excluding citation notice)
-            if verbose and result.stdout:
+
+            # Filter and print output (after completion)
+            if verbose:
                 _print_filtered_output(result.stdout)
+
+            if result.returncode != 0:
+                if verbose:
+                    print(result.stderr)
+                raise subprocess.CalledProcessError(result.returncode, cmd)
+
         except subprocess.CalledProcessError as e:
-            raise RuntimeError(f"nnU-Net inference failed: {e.stderr if e.stderr else e}")
+            raise RuntimeError(f"nnU-Net inference failed with exit code {e.returncode}")
         except FileNotFoundError:
             raise RuntimeError(
                 "nnUNetv2_predict not found. Please install nnU-Net:\n"
