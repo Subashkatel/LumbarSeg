@@ -274,4 +274,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - nnU-Net team at DKFZ for the self-configuring segmentation framework
-- Princeton University Research Computing for HPC resources
