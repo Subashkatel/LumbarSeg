@@ -125,6 +125,8 @@ credentials.json
 
 # Local configuration (contains user-specific paths)
 config.sh
+CLAUDE.md
+lists/
 
 # Temporary SLURM test scripts
 scripts/test_*.sbatch
