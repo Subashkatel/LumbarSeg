@@ -9,6 +9,7 @@ Usage:
 """
 
 import os
+import platform
 import sys
 import shutil
 import tempfile
@@ -443,10 +444,14 @@ def _run_nnunet_inference(
         if not verbose:
             cmd.append("--disable_progress_bar")
 
+        # On macOS, disable multiprocessing to prevent deadlocks.
+        # Python 3.8+ on macOS uses 'spawn' (not 'fork') for multiprocessing,
+        # which causes nnU-Net's preprocessing/export workers to hang.
+        # Setting -npp 0 -nps 0 forces sequential mode.
+        if platform.system() == "Darwin":
+            cmd.extend(["-npp", "0", "-nps", "0"])
+
         # Run inference
-        # Note: Using subprocess.run() instead of Popen to avoid hanging on Mac.
-        # The Popen approach with line-buffered reading hangs because tqdm progress
-        # bars use \r (carriage return) without newlines.
         try:
             result = subprocess.run(
                 cmd,
