@@ -14,6 +14,7 @@ import sys
 import shutil
 import tempfile
 import subprocess
+import threading
 import time
 from pathlib import Path
 from typing import Optional, Union, List
@@ -385,6 +386,20 @@ def _print_filtered_output(output: str):
         print(line)
 
 
+def _run_spinner(stop_event: threading.Event):
+    """Show a spinner with elapsed time while inference is running."""
+    chars = "|/-\\"
+    start = time.time()
+    i = 0
+    while not stop_event.is_set():
+        elapsed = time.time() - start
+        print(f"\r  {chars[i % len(chars)]} Processing... ({elapsed:.0f}s)", end="", flush=True)
+        i += 1
+        stop_event.wait(0.2)
+    elapsed = time.time() - start
+    print(f"\r  Inference completed in {elapsed:.1f}s" + " " * 20)
+
+
 def _run_nnunet_inference(
     input_path: Path,
     output_path: Path,
@@ -451,16 +466,24 @@ def _run_nnunet_inference(
         if platform.system() == "Darwin":
             cmd.extend(["-npp", "0", "-nps", "0"])
 
-        # Run inference
+        # Run inference with a spinner so the user knows it's working
         try:
+            if verbose:
+                stop_spinner = threading.Event()
+                spinner_thread = threading.Thread(
+                    target=_run_spinner, args=(stop_spinner,), daemon=True
+                )
+                spinner_thread.start()
+
             result = subprocess.run(
                 cmd,
                 capture_output=True,
                 text=True,
             )
 
-            # Filter and print output (after completion)
             if verbose:
+                stop_spinner.set()
+                spinner_thread.join()
                 _print_filtered_output(result.stdout)
 
             if result.returncode != 0:
