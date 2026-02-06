@@ -202,14 +202,14 @@ results = evaluate(
 
 ## Citation
 
-```bibtex
+<!-- ```bibtex
 @software{lumbarseg2026,
   author = {Subash Katel},
   title = {LumbarSeg: Automatic Lumbar Paraspinal Muscle Segmentation},
   year = {2026},
   url = {https://github.com/Subashkatel/LumbarSeg}
 }
-```
+``` -->
 
 ## References
 
