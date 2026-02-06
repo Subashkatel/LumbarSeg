@@ -2,7 +2,7 @@
 
 Automatic segmentation of lumbar paraspinal muscles from MRI using nnU-Net v2.
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![nnU-Net v2](https://img.shields.io/badge/nnU--Net-v2.6+-green.svg)](https://github.com/MIC-DKFZ/nnUNet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
