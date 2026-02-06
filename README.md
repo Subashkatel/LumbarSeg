@@ -60,19 +60,27 @@ pixi run pip install .
 ### Run Segmentation
 
 ```bash
-# Minimal - output goes to scan_segmented/ automatically
-lumbarseg -i scan.nii.gz
+# Basic usage: -i is the path to your input NIfTI file
+lumbarseg -i /path/to/scan.nii.gz
 
-# Specify output directory
-lumbarseg -i scan.nii.gz -o results/
+# Specify where to save output: -o is the path to the output directory
+lumbarseg -i /path/to/scan.nii.gz -o /path/to/results/
 
-# Batch processing (entire folder)
-lumbarseg -i scans_folder/ -o results_folder/
+# CPU or Mac: use --fast and --disable-tta for faster inference (~3min instead of ~20min)
+lumbarseg -i /path/to/scan.nii.gz --fast --disable-tta
+
+# CPU or Mac: full accuracy but slower (~20min)
+lumbarseg -i /path/to/scan.nii.gz --device cpu
+
+# Batch processing: -i can also be a directory of NIfTI files
+lumbarseg -i /path/to/scans_folder/ -o /path/to/results_folder/
 ```
 
 Model weights are downloaded automatically on first use (~2.5 GB).
 
 ### Output
+
+By default, the output folder is named after the input file with `_segmented` appended (e.g., `scan.nii.gz` produces `scan_segmented/`). Use `-o` to specify a custom output directory.
 
 Every run produces an output folder with:
 
