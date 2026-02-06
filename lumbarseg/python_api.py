@@ -655,14 +655,19 @@ def generate_preview(
     if verbose:
         print(f"\nGenerating preview image...")
 
-    # Load images
+    # Load images and reorient to RAS+ (standard radiological orientation)
+    # This ensures axial slices are along the 3rd dimension regardless of
+    # how the NIfTI file was originally stored.
     img = nib.load(str(input_image))
     seg = nib.load(str(segmentation))
 
-    img_data = img.get_fdata()
-    seg_data = seg.get_fdata()
+    img_ras = nib.as_closest_canonical(img)
+    seg_ras = nib.as_closest_canonical(seg)
 
-    # Find slices with most segmentation content
+    img_data = img_ras.get_fdata()
+    seg_data = seg_ras.get_fdata()
+
+    # Find axial slices (z-axis in RAS) with most segmentation content
     slice_scores = []
     for z in range(seg_data.shape[2]):
         score = np.sum(seg_data[:, :, z] > 0)
@@ -688,15 +693,13 @@ def generate_preview(
         axes = [axes]
 
     for ax, z in zip(axes, selected_slices):
-        # Normalize image slice
-        img_slice = img_data[:, :, z]
-        img_slice = np.rot90(img_slice)
+        # Normalize image slice (axial = [:, :, z] in RAS orientation)
+        img_slice = np.rot90(img_data[:, :, z])
         vmin, vmax = np.percentile(img_slice, [1, 99])
         img_normalized = np.clip((img_slice - vmin) / (vmax - vmin + 1e-8), 0, 1)
 
         # Get segmentation slice
-        seg_slice = seg_data[:, :, z]
-        seg_slice = np.rot90(seg_slice)
+        seg_slice = np.rot90(seg_data[:, :, z])
 
         # Plot
         ax.imshow(img_normalized, cmap='gray')
