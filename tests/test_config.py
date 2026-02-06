@@ -32,7 +32,7 @@ class TestConstants:
         assert config.GITHUB_REPO == "Subashkatel/LumbarSeg"
 
     def test_release_tag(self):
-        assert config.RELEASE_TAG == "v1.0"
+        assert config.RELEASE_TAG == "v1.1"
 
     def test_model_files(self):
         assert len(config.MODEL_FILES) == 5
