@@ -5,10 +5,6 @@ LumbarSeg - Configuration and constants.
 import os
 from pathlib import Path
 
-# Package info
-PACKAGE_NAME = "lumbarseg"
-VERSION = "1.0.0"
-
 # Model configuration
 DATASET_ID = "001"
 DATASET_NAME = "Dataset001_LumbarMuscle"
@@ -28,15 +24,6 @@ MODEL_FILES = {
 }
 
 # Label mapping
-LABELS = {
-    0: "Background",
-    1: "Left Erector Spinae (L_ES)",
-    2: "Right Erector Spinae (R_ES)",
-    3: "Left Multifidus (L_MF)",
-    4: "Right Multifidus (R_MF)",
-}
-
-# Short labels for display
 LABEL_NAMES = {
     0: "BG",
     1: "L_ES",

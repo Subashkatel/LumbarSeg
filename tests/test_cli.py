@@ -3,8 +3,7 @@ Tests for lumbarseg.cli module.
 """
 
 import sys
-from io import StringIO
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 import pytest
 
@@ -15,21 +14,9 @@ class TestCLIArgumentParsing:
     """Test CLI argument parsing."""
 
     def test_required_arguments(self):
-        """Test that -i and -o are required."""
+        """Test that -i is required."""
         with pytest.raises(SystemExit):
             with patch.object(sys, "argv", ["lumbarseg"]):
-                cli.main()
-
-    def test_missing_input(self):
-        """Test error when input is missing."""
-        with pytest.raises(SystemExit):
-            with patch.object(sys, "argv", ["lumbarseg", "-o", "output.nii.gz"]):
-                cli.main()
-
-    def test_missing_output(self):
-        """Test error when output is missing."""
-        with pytest.raises(SystemExit):
-            with patch.object(sys, "argv", ["lumbarseg", "-i", "input.nii.gz"]):
                 cli.main()
 
     def test_version_flag(self, capsys):
@@ -201,37 +188,44 @@ class TestCLIErrorHandling:
         assert "Error" in captured.err
 
 
-class TestCLIPreviewAndSplit:
-    """Test CLI preview and split options."""
+class TestCLIGroundTruth:
+    """Test CLI ground truth evaluation options."""
 
-    @patch("lumbarseg.cli.split_segmentation")
     @patch("lumbarseg.cli.segment")
-    def test_split_option(self, mock_segment, mock_split, mock_nifti_file, temp_dir):
-        """Test --split option calls split_segmentation."""
-        output_path = temp_dir / "output.nii.gz"
-        mock_split.return_value = {}
+    def test_gt_flag(self, mock_segment, mock_nifti_file, temp_dir):
+        """Test --gt flag passes ground truth files to segment."""
+        output_path = temp_dir / "output"
+        gt1 = temp_dir / "L_ES.nii"
+        gt2 = temp_dir / "R_ES.nii"
+        gt1.write_bytes(b"fake")
+        gt2.write_bytes(b"fake")
 
         with patch.object(
             sys, "argv",
-            ["lumbarseg", "-i", str(mock_nifti_file), "-o", str(output_path), "--split"]
+            ["lumbarseg", "-i", str(mock_nifti_file), "-o", str(output_path),
+             "--gt", str(gt1), str(gt2)]
         ):
             cli.main()
 
         mock_segment.assert_called_once()
-        mock_split.assert_called_once()
+        call_kwargs = mock_segment.call_args[1]
+        assert call_kwargs["ground_truth"] is not None
+        assert len(call_kwargs["ground_truth"]) == 2
 
-    @patch("lumbarseg.cli.generate_preview")
+
+class TestCLIAutoNaming:
+    """Test automatic output naming."""
+
     @patch("lumbarseg.cli.segment")
-    def test_preview_option(self, mock_segment, mock_preview, mock_nifti_file, temp_dir):
-        """Test --preview option calls generate_preview."""
-        output_path = temp_dir / "output.nii.gz"
-        mock_preview.return_value = temp_dir / "preview.png"
-
+    def test_auto_output_name(self, mock_segment, mock_nifti_file, temp_dir):
+        """Test that output is auto-named when -o is not specified."""
         with patch.object(
             sys, "argv",
-            ["lumbarseg", "-i", str(mock_nifti_file), "-o", str(output_path), "--preview"]
+            ["lumbarseg", "-i", str(mock_nifti_file)]
         ):
             cli.main()
 
         mock_segment.assert_called_once()
-        mock_preview.assert_called_once()
+        call_kwargs = mock_segment.call_args[1]
+        output_path = call_kwargs["output"]
+        assert str(output_path).endswith("_segmented")

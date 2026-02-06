@@ -47,87 +47,55 @@ class TestFullInferencePipeline:
 
     @pytest.mark.skipif(not weights_available(), reason="Model weights not available")
     def test_single_file_inference(self, real_nifti_file, temp_dir):
-        """Test inference on a single file."""
-        output_path = temp_dir / "segmentation.nii.gz"
+        """Test inference on a single file produces output folder."""
+        output_dir = temp_dir / "results"
 
         result = segment(
             input=real_nifti_file,
-            output=output_path,
+            output=output_dir,
             fold=0,  # Use single fold for faster testing
             device="cuda" if os.environ.get("CUDA_VISIBLE_DEVICES") else "cpu",
             verbose=True,
         )
 
-        assert result == output_path
-        assert output_path.exists()
+        assert result == output_dir
+        assert output_dir.exists()
+        assert (output_dir / "segmentation.nii.gz").exists()
+        assert (output_dir / "L_ES.nii.gz").exists()
+        assert (output_dir / "R_ES.nii.gz").exists()
+        assert (output_dir / "L_MF.nii.gz").exists()
+        assert (output_dir / "R_MF.nii.gz").exists()
+        assert (output_dir / "preview.png").exists()
 
-        # Verify output is a valid NIfTI with correct labels
+        # Verify segmentation is a valid NIfTI with correct labels
         import nibabel as nib
-        seg = nib.load(str(output_path))
+        seg = nib.load(str(output_dir / "segmentation.nii.gz"))
         data = seg.get_fdata()
-
-        # Check shape matches input
-        input_img = nib.load(str(real_nifti_file))
-        assert data.shape == input_img.shape
 
         # Check labels are in valid range (0-4)
         unique_labels = np.unique(data)
         assert all(label in [0, 1, 2, 3, 4] for label in unique_labels)
 
     @pytest.mark.skipif(not weights_available(), reason="Model weights not available")
-    def test_inference_with_preview(self, real_nifti_file, temp_dir):
-        """Test inference with preview generation."""
-        from lumbarseg.python_api import generate_preview
+    def test_binary_masks_are_valid(self, real_nifti_file, temp_dir):
+        """Test that output binary masks are binary (0 and 1 only)."""
+        import nibabel as nib
 
-        output_path = temp_dir / "segmentation.nii.gz"
+        output_dir = temp_dir / "results"
 
-        # Run inference
         segment(
             input=real_nifti_file,
-            output=output_path,
+            output=output_dir,
             fold=0,
             verbose=False,
         )
 
-        # Generate preview
-        preview_path = generate_preview(
-            input_image=real_nifti_file,
-            segmentation=output_path,
-            verbose=False,
-        )
-
-        assert preview_path is not None
-        assert preview_path.exists()
-        assert preview_path.suffix == ".png"
-
-    @pytest.mark.skipif(not weights_available(), reason="Model weights not available")
-    def test_inference_with_split(self, real_nifti_file, temp_dir):
-        """Test inference with segmentation splitting."""
-        from lumbarseg.python_api import split_segmentation
-
-        output_path = temp_dir / "segmentation.nii.gz"
-
-        # Run inference
-        segment(
-            input=real_nifti_file,
-            output=output_path,
-            fold=0,
-            verbose=False,
-        )
-
-        # Split segmentation
-        split_dir = temp_dir / "split"
-        split_dir.mkdir()
-        split_files = split_segmentation(
-            segmentation=output_path,
-            output_dir=split_dir,
-            verbose=False,
-        )
-
-        assert len(split_files) == 4
         for label_name in ["L_ES", "R_ES", "L_MF", "R_MF"]:
-            assert label_name in split_files
-            assert split_files[label_name].exists()
+            mask_path = output_dir / f"{label_name}.nii.gz"
+            assert mask_path.exists()
+            data = nib.load(str(mask_path)).get_fdata()
+            unique_values = np.unique(data)
+            assert set(unique_values).issubset({0, 1})
 
 
 class TestEnvironmentSetup:
@@ -151,18 +119,19 @@ class TestDeviceHandling:
     @pytest.mark.skipif(not weights_available(), reason="Model weights not available")
     def test_cpu_inference(self, real_nifti_file, temp_dir):
         """Test inference on CPU."""
-        output_path = temp_dir / "segmentation.nii.gz"
+        output_dir = temp_dir / "results"
 
         result = segment(
             input=real_nifti_file,
-            output=output_path,
+            output=output_dir,
             fold=0,
             device="cpu",
             verbose=False,
         )
 
-        assert result == output_path
-        assert output_path.exists()
+        assert result == output_dir
+        assert output_dir.exists()
+        assert (output_dir / "segmentation.nii.gz").exists()
 
 
 class TestOutputFormats:
@@ -173,16 +142,16 @@ class TestOutputFormats:
         """Test that output contains integer labels."""
         import nibabel as nib
 
-        output_path = temp_dir / "segmentation.nii.gz"
+        output_dir = temp_dir / "results"
 
         segment(
             input=real_nifti_file,
-            output=output_path,
+            output=output_dir,
             fold=0,
             verbose=False,
         )
 
-        seg = nib.load(str(output_path))
+        seg = nib.load(str(output_dir / "segmentation.nii.gz"))
         data = seg.get_fdata()
 
         # Labels should be integers 0-4

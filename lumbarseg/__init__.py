@@ -11,16 +11,16 @@ Segments 4 muscle classes:
 
 Quick Start:
     # CLI
-    lumbarseg -i scan.nii.gz -o segmentation.nii.gz
+    lumbarseg -i scan.nii.gz -o results/
 
     # Python API
     from lumbarseg import segment
-    segment("scan.nii.gz", "segmentation.nii.gz")
+    segment("scan.nii.gz", "results/")
 """
 
 __version__ = "1.0.0"
 __author__ = "LumbarSeg Team"
 
-from .python_api import segment
+from .python_api import segment, evaluate
 
-__all__ = ["segment", "__version__"]
+__all__ = ["segment", "evaluate", "__version__"]

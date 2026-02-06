@@ -2,7 +2,7 @@
 
 Automatic segmentation of lumbar paraspinal muscles from MRI using nnU-Net v2.
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![nnU-Net v2](https://img.shields.io/badge/nnU--Net-v2.6+-green.svg)](https://github.com/MIC-DKFZ/nnUNet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -10,12 +10,12 @@ Automatic segmentation of lumbar paraspinal muscles from MRI using nnU-Net v2.
 
 LumbarSeg provides automated segmentation of four lumbar paraspinal muscles from MRI:
 
-| Muscle | Abbreviation | Description |
-|--------|--------------|-------------|
-| Left Erector Spinae | L_ES | Large muscle group lateral to spine |
-| Right Erector Spinae | R_ES | Large muscle group lateral to spine |
-| Left Multifidus | L_MF | Deep muscle medial to ES |
-| Right Multifidus | R_MF | Deep muscle medial to ES |
+| Muscle | Label | Color |
+|--------|-------|-------|
+| Left Erector Spinae | L_ES (1) | Red |
+| Right Erector Spinae | R_ES (2) | Blue |
+| Left Multifidus | L_MF (3) | Green |
+| Right Multifidus | R_MF (4) | Yellow |
 
 ### Performance
 
@@ -30,7 +30,6 @@ Trained on 347 subjects with 5-fold cross-validation using nnU-Net v2.
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/Subashkatel/LumbarSeg.git
 cd LumbarSeg
 ```
@@ -40,11 +39,10 @@ cd LumbarSeg
 conda create -n lumbarseg python=3.11
 conda activate lumbarseg
 
-# Install PyTorch
-# For CUDA (Linux/Windows with NVIDIA GPU):
+# Install PyTorch (GPU)
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# For Mac (CPU - MPS not supported by nnU-Net):
+# For Mac (CPU only - MPS not supported by nnU-Net):
 pip install torch torchvision
 
 # Install LumbarSeg
@@ -55,24 +53,18 @@ pip install .
 ```bash
 pixi init
 pixi add python=3.11 pytorch torchvision
-
-# For CUDA support, add:
-pixi add pytorch-cuda=12.1 -c pytorch -c nvidia
-
-# Install LumbarSeg
+pixi add pytorch-cuda=12.1 -c pytorch -c nvidia  # For CUDA
 pixi run pip install .
-
-# Run commands with pixi
-pixi run lumbarseg -i scan.nii.gz -o seg.nii.gz
 ```
 
 ### Run Segmentation
 
-**That's it! Just two commands:**
-
 ```bash
-# Single file
-lumbarseg -i scan.nii.gz -o segmentation.nii.gz
+# Minimal - output goes to scan_segmented/ automatically
+lumbarseg -i scan.nii.gz
+
+# Specify output directory
+lumbarseg -i scan.nii.gz -o results/
 
 # Batch processing (entire folder)
 lumbarseg -i scans_folder/ -o results_folder/
@@ -80,181 +72,131 @@ lumbarseg -i scans_folder/ -o results_folder/
 
 Model weights are downloaded automatically on first use (~2.5 GB).
 
-### Python API
+### Output
 
-```python
-from lumbarseg import segment
+Every run produces an output folder with:
 
-# Single file
-segment("scan.nii.gz", "segmentation.nii.gz")
+```
+scan_segmented/
+├── segmentation.nii.gz    # Multi-label segmentation (0-4)
+├── L_ES.nii.gz            # Binary mask - Left Erector Spinae
+├── R_ES.nii.gz            # Binary mask - Right Erector Spinae
+├── L_MF.nii.gz            # Binary mask - Left Multifidus
+├── R_MF.nii.gz            # Binary mask - Right Multifidus
+├── preview.png            # 8-slice segmentation overlay
+└── metrics.csv            # Evaluation metrics (only with --gt)
+```
 
-# With options
-segment("scan.nii.gz", "seg.nii.gz", fold=0, device="cpu")
+### Ground Truth Comparison
+
+Compare predictions against manual segmentations:
+
+```bash
+# Separate binary masks
+lumbarseg -i scan.nii.gz --gt L_ES.nii R_ES.nii L_Mult.nii R_Mult.nii
+
+# Single multi-label mask
+lumbarseg -i scan.nii.gz --gt ground_truth.nii.gz
+```
+
+Output includes a metrics table:
+
+```
+Evaluation Results:
+==============================================================================
+Muscle         Dice  Jaccard  HD95(mm)  ASSD(mm)  Precision   Recall
+------------------------------------------------------------------------------
+L_ES          95.2%    90.8%     3.21      0.45      96.7%    93.7%
+R_ES          94.8%    90.1%     3.54      0.51      96.0%    93.6%
+L_MF          93.2%    87.3%     4.12      0.62      93.8%    92.7%
+R_MF          93.3%    87.4%     3.89      0.58      94.9%    91.6%
+------------------------------------------------------------------------------
+Mean          94.1%    88.9%     3.69      0.54      95.4%    92.9%
 ```
 
 ### CLI Options
 
-```bash
-lumbarseg -i INPUT -o OUTPUT [options]
+```
+lumbarseg -i INPUT [-o OUTPUT] [options]
 
 Required:
-  -i, --input      Input NIfTI file or directory
-  -o, --output     Output file or directory
+  -i, --input          Input NIfTI file or directory
 
-Options:
-  --fast           Use single fold for faster inference (~90% Dice)
-  -d, --device     Device: cuda, cpu, or mps (auto-detected)
-  -f, --fold       Fold(s): 0-4 or 'all' for ensemble (default: all)
-  -q, --quiet      Suppress output messages
-```
-
-### Advanced: Manual nnU-Net Usage
-
-For researchers who want direct nnU-Net access:
-
-```bash
-# Install custom trainer
-./scripts/install_trainer.sh
-
-# Download weights manually
-./scripts/download_weights.sh
-
-# Set environment variables
-export nnUNet_results=/path/to/LumbarSeg/nnUNet_results
-export nnUNet_raw=/path/to/LumbarSeg/nnUNet_raw
-export nnUNet_preprocessed=/path/to/LumbarSeg/nnUNet_preprocessed
-
-# Run nnU-Net directly
-nnUNetv2_predict \
-    -i /path/to/images \
-    -o /path/to/output \
-    -d 001 -c 3d_fullres -tr nnUNetTrainerWandb -f 0 1 2 3 4
+Optional:
+  -o, --output         Output directory (default: <input>_segmented/)
+  --gt FILE [FILE...]  Ground truth mask(s) for evaluation
+  --fast               Use single fold for faster inference (~90% Dice)
+  -d, --device         Device: cuda, cpu (default: auto-detect)
+  -f, --fold           Fold(s): 0-4 or 'all' (default: all)
+  --disable-tta        Disable test-time augmentation (8x faster)
+  --save-probabilities Save probability maps
+  -q, --quiet          Suppress output messages
+  -v, --version        Show version
 ```
 
 ## Input Requirements
 
 - **Format**: NIfTI (.nii or .nii.gz)
-- **Modality**: T1-weighted or T2-weighted MRI of lumbar spine
-- **Naming**: Any filename (the CLI handles nnU-Net naming conventions automatically)
-- **Orientation**: Any orientation (nnU-Net handles reorientation)
+- **Modality**: T1/T2-weighted Inculding Water Fat MRI of lumbar spine
+- **Orientation**: Any orientation (auto-reoriented to RAS before inference)
 
-Example:
-```
-input_folder/
-├── patient001.nii.gz
-├── patient002.nii.gz
-└── patient003.nii.gz
-```
+## Platform Support
 
-## Output
+| Platform | GPU | CPU | Estimated Time (per scan) |
+|----------|-----|-----|---------------------------|
+| Linux | CUDA | Yes | ~35s (GPU) / ~20min (CPU) |
+| macOS | No (MPS disabled) | Yes | ~20min (CPU only) |
+| Windows | CUDA | Yes | ~35s (GPU) / ~20min (CPU) |
 
-Predictions are saved as multi-label NIfTI files with values:
-- `0`: Background
-- `1`: Left Erector Spinae (L_ES)
-- `2`: Right Erector Spinae (R_ES)
-- `3`: Left Multifidus (L_MF)
-- `4`: Right Multifidus (R_MF)
+> **Note:** For optimal results, an NVIDIA GPU with CUDA support is strongly recommended.
+> CPU inference works but is significantly slower (~30x). On macOS, only CPU is available
+> because nnU-Net does not support Apple's MPS backend. Use `--fast` and `--disable-tta`
+> flags to reduce CPU inference time at the cost of slightly lower accuracy.
 
 ## Project Structure
 
 ```
 LumbarSeg/
-├── lumbarseg/                  # Main Python package
-│   ├── __init__.py             # Package init with segment() function
-│   ├── python_api.py           # Python API implementation
+├── lumbarseg/                  # Python package
+│   ├── __init__.py
+│   ├── python_api.py           # Core API (segment, evaluate, etc.)
 │   ├── cli.py                  # Command-line interface
 │   └── config.py               # Configuration and constants
-├── nnunetv2_trainers/          # Custom nnU-Net trainer
-│   └── nnUNetTrainerWandb.py   # Trainer with W&B logging
-├── scripts/                    # Training and utility scripts
-│   ├── install_trainer.sh      # Install custom trainer
-│   ├── download_weights.sh     # Download pre-trained weights
-│   ├── train_nnunet.sbatch     # Single-fold training (SLURM)
-│   ├── train_nnunet_5fold.sbatch # 5-fold cross-validation (SLURM)
-│   ├── eval_crossval.sbatch    # Cross-validation evaluation (SLURM)
-│   └── eval_ensemble.sbatch    # Ensemble evaluation (SLURM)
-├── evaluation/                 # Evaluation utilities
-│   ├── compute_metrics.py      # Dice, HD95, ASSD metrics
-│   └── generate_visualizations.py # GT vs Pred overlays
+├── tests/                      # Test suite
+├── evaluation/                 # Standalone evaluation utilities
+├── scripts/                    # Training/SLURM scripts
 ├── setup.py                    # Package installation
-├── requirements.txt
-├── CLAUDE.md                   # Developer documentation
 └── README.md
 ```
 
-## Training Your Own Model
+### Python API
 
-### Data Preparation
+```python
+from lumbarseg import segment, evaluate
 
-1. Organize your data:
+# Basic usage
+segment("scan.nii.gz", "results/")
+
+# With options
+segment("scan.nii.gz", "results/", fold=0, device="cpu")
+
+# With ground truth evaluation
+segment("scan.nii.gz", "results/",
+        ground_truth=["L_ES.nii", "R_ES.nii", "L_Mult.nii", "R_Mult.nii"])
+
+# Evaluate separately
+results = evaluate(
+    prediction="results/segmentation.nii.gz",
+    ground_truth=["L_ES.nii", "R_ES.nii", "L_Mult.nii", "R_Mult.nii"],
+    output_path="results/metrics.csv"
+)
 ```
-data/
-├── subject001/
-│   ├── image.nii.gz           # MRI volume
-│   └── label.nii.gz           # Multi-label mask (0-4)
-├── subject002/
-│   └── ...
-```
-
-2. Convert to nnU-Net format:
-```bash
-python scripts/convert_to_nnunet.py \
-    --input-dir data/ \
-    --output-dir nnUNet_raw/Dataset001_LumbarMuscle
-```
-
-### Preprocessing
-
-```bash
-nnUNetv2_plan_and_preprocess -d 001 --verify_dataset_integrity -c 3d_fullres
-```
-
-### Training
-
-```bash
-# Train all 5 folds (recommended)
-for fold in 0 1 2 3 4; do
-    nnUNetv2_train 001 3d_fullres $fold -tr nnUNetTrainer
-done
-
-# Or use SLURM for cluster training
-sbatch scripts/train_nnunet_5fold.sbatch
-```
-
-## Evaluation
-
-### Compute Metrics
-
-```bash
-python evaluation/compute_metrics.py \
-    --pred-dir predictions/ \
-    --gt-dir ground_truth/ \
-    --output metrics.csv
-```
-
-### Generate Visualizations
-
-```bash
-python evaluation/generate_visualizations.py \
-    --image-dir images/ \
-    --gt-dir ground_truth/ \
-    --pred-dir predictions/ \
-    --output-dir visualizations/
-```
-
-Generates side-by-side comparisons with color-coded overlays:
-- **Red**: Left Erector Spinae
-- **Blue**: Right Erector Spinae
-- **Green**: Left Multifidus
-- **Yellow**: Right Multifidus
 
 ## Citation
 
-If you use LumbarSeg in your research, please cite:
-
 ```bibtex
 @software{lumbarseg2026,
-  author = {Your Name},
+  author = {Subash Katel},
   title = {LumbarSeg: Automatic Lumbar Paraspinal Muscle Segmentation},
   year = {2026},
   url = {https://github.com/Subashkatel/LumbarSeg}
@@ -269,8 +211,4 @@ If you use LumbarSeg in your research, please cite:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- nnU-Net team at DKFZ for the self-configuring segmentation framework
+MIT License - see [LICENSE](LICENSE) for details.

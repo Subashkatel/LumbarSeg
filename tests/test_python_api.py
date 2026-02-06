@@ -178,7 +178,7 @@ class TestSegment:
     def test_invalid_input_raises_error(self, temp_dir):
         """Test that FileNotFoundError is raised for missing input."""
         fake_input = temp_dir / "nonexistent.nii.gz"
-        output = temp_dir / "output.nii.gz"
+        output = temp_dir / "output"
 
         with pytest.raises(FileNotFoundError):
             python_api.segment(fake_input, output, verbose=False)
@@ -187,7 +187,7 @@ class TestSegment:
         """Test that ValueError is raised for wrong extension."""
         wrong_file = temp_dir / "test.txt"
         wrong_file.write_text("not a nifti")
-        output = temp_dir / "output.nii.gz"
+        output = temp_dir / "output"
 
         with pytest.raises(ValueError, match="must be a NIfTI file"):
             python_api.segment(wrong_file, output, verbose=False)
@@ -291,6 +291,86 @@ class TestSplitSegmentation:
             data = img.get_fdata()
             unique_values = np.unique(data)
             assert set(unique_values).issubset({0, 1})
+
+
+class TestIdentifyGtLabel:
+    """Test _identify_gt_label() function."""
+
+    def test_l_es(self):
+        assert python_api._identify_gt_label("L_ES.nii") == 1
+
+    def test_r_es(self):
+        assert python_api._identify_gt_label("R_ES.nii") == 2
+
+    def test_l_mult(self):
+        assert python_api._identify_gt_label("L_Mult.nii") == 3
+
+    def test_r_mult(self):
+        assert python_api._identify_gt_label("R_Mult.nii") == 4
+
+    def test_l_mf(self):
+        assert python_api._identify_gt_label("L_MF.nii.gz") == 3
+
+    def test_r_mf(self):
+        assert python_api._identify_gt_label("R_MF.nii.gz") == 4
+
+    def test_case_insensitive(self):
+        assert python_api._identify_gt_label("l_es.nii") == 1
+        assert python_api._identify_gt_label("r_mult.nii") == 4
+
+    def test_unknown_returns_none(self):
+        assert python_api._identify_gt_label("unknown.nii") is None
+
+
+class TestEvaluate:
+    """Test evaluate() function."""
+
+    def test_evaluate_perfect_match(self, mock_segmentation_file, temp_dir):
+        """Test evaluation with identical prediction and ground truth."""
+        try:
+            from scipy.ndimage import distance_transform_edt
+        except ImportError:
+            pytest.skip("scipy not installed")
+
+        results = python_api.evaluate(
+            prediction=mock_segmentation_file,
+            ground_truth=mock_segmentation_file,
+            output_path=temp_dir / "metrics.csv",
+            verbose=False,
+        )
+
+        assert "L_ES" in results
+        assert "R_ES" in results
+        assert "L_MF" in results
+        assert "R_MF" in results
+        assert "Mean" in results
+
+        # Perfect match should have Dice = 1.0
+        for label in ["L_ES", "R_ES", "L_MF", "R_MF"]:
+            assert results[label]["Dice"] > 0.99
+
+        # Check CSV was created
+        assert (temp_dir / "metrics.csv").exists()
+
+    def test_evaluate_shape_mismatch(self, temp_dir):
+        """Test that shape mismatch raises ValueError."""
+        try:
+            import nibabel as nib
+            import numpy as np
+        except ImportError:
+            pytest.skip("nibabel/numpy not installed")
+
+        # Create two NIfTI files with different shapes
+        pred_data = np.zeros((64, 64, 32), dtype=np.uint8)
+        gt_data = np.zeros((64, 64, 16), dtype=np.uint8)
+
+        pred_path = temp_dir / "pred.nii.gz"
+        gt_path = temp_dir / "gt.nii.gz"
+        nib.save(nib.Nifti1Image(pred_data, np.eye(4)), str(pred_path))
+        nib.save(nib.Nifti1Image(gt_data, np.eye(4)), str(gt_path))
+
+        with pytest.raises(ValueError, match="Shape mismatch"):
+            python_api.evaluate(pred_path, gt_path, verbose=False)
 
 
 class TestDownloadWithProgress:

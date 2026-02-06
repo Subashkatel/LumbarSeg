@@ -3,8 +3,9 @@
 LumbarSeg - Command Line Interface
 
 Usage:
-    lumbarseg -i scan.nii.gz -o segmentation.nii.gz
-    lumbarseg -i scans/ -o results/
+    lumbarseg -i scan.nii.gz
+    lumbarseg -i scan.nii.gz -o results/
+    lumbarseg -i scan.nii.gz --gt L_ES.nii R_ES.nii L_Mult.nii R_Mult.nii
 """
 
 import argparse
@@ -12,8 +13,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
-from .python_api import segment, segment_batch, detect_device, generate_preview, split_segmentation
-from .config import LABELS, LABEL_NAMES
+from .python_api import segment, segment_batch
 
 
 def main():
@@ -30,12 +30,24 @@ Output Labels:
   3 = Left Multifidus (L_MF)
   4 = Right Multifidus (R_MF)
 
+Output Folder Structure:
+  output/
+  ├── segmentation.nii.gz    Multi-label segmentation (0-4)
+  ├── L_ES.nii.gz            Binary mask - Left Erector Spinae
+  ├── R_ES.nii.gz            Binary mask - Right Erector Spinae
+  ├── L_MF.nii.gz            Binary mask - Left Multifidus
+  ├── R_MF.nii.gz            Binary mask - Right Multifidus
+  ├── preview.png            Segmentation overlay image
+  └── metrics.csv            Evaluation metrics (only with --gt)
+
 Examples:
-  lumbarseg -i scan.nii.gz -o segmentation.nii.gz
-  lumbarseg -i scan.nii.gz -o seg.nii.gz --preview
+  lumbarseg -i scan.nii.gz                      # -> scan_segmented/
+  lumbarseg -i scan.nii.gz -o results/           # -> results/
   lumbarseg -i scans_folder/ -o results_folder/
-  lumbarseg -i scan.nii.gz -o seg.nii.gz --fast
-  lumbarseg -i scan.nii.gz -o seg.nii.gz --device cpu
+  lumbarseg -i scan.nii.gz --fast
+  lumbarseg -i scan.nii.gz --device cpu
+  lumbarseg -i scan.nii.gz --gt L_ES.nii R_ES.nii L_Mult.nii R_Mult.nii
+  lumbarseg -i scan.nii.gz --gt combined_gt.nii.gz
         """,
     )
 
@@ -49,8 +61,8 @@ Examples:
     parser.add_argument(
         "-o", "--output",
         type=Path,
-        required=True,
-        help="Output segmentation file or directory",
+        default=None,
+        help="Output directory (default: <input_name>_segmented/ next to input file)",
     )
 
     # Optional arguments
@@ -66,7 +78,7 @@ Examples:
     )
     parser.add_argument(
         "-d", "--device",
-        choices=["cuda", "cpu", "mps"],
+        choices=["cuda", "cpu"],
         default=None,
         help="Device for inference (default: auto-detect)",
     )
@@ -76,14 +88,11 @@ Examples:
         help="Save probability maps",
     )
     parser.add_argument(
-        "--preview",
-        action="store_true",
-        help="Generate a PNG preview image showing the segmentation overlay",
-    )
-    parser.add_argument(
-        "--split",
-        action="store_true",
-        help="Output separate binary mask files for each muscle class (L_ES, R_ES, L_MF, R_MF)",
+        "--gt",
+        type=Path,
+        nargs="+",
+        default=None,
+        help="Ground truth mask file(s) for evaluation. Either a single multi-label NIfTI or separate binary masks (L_ES, R_ES, L_Mult, R_Mult)",
     )
     parser.add_argument(
         "--disable-tta",
@@ -114,6 +123,22 @@ Examples:
 
     verbose = not args.quiet
 
+    # Convert gt paths to list or None
+    ground_truth = args.gt if args.gt else None
+
+    # Auto-generate output path if not specified
+    if args.output is None:
+        if args.input.is_dir():
+            args.output = args.input.parent / f"{args.input.name}_segmented"
+        else:
+            # Remove .nii.gz or .nii extension
+            stem = args.input.name
+            for suffix in ['.nii.gz', '.nii']:
+                if stem.endswith(suffix):
+                    stem = stem[:-len(suffix)]
+                    break
+            args.output = args.input.parent / f"{stem}_segmented"
+
     try:
         # Check if input is file or directory
         if args.input.is_dir():
@@ -135,28 +160,8 @@ Examples:
                 verbose=verbose,
                 save_probabilities=args.save_probabilities,
                 disable_tta=args.disable_tta,
+                ground_truth=ground_truth,
             )
-
-            # Split into separate masks if requested
-            if args.split:
-                split_files = split_segmentation(
-                    segmentation=args.output,
-                    verbose=verbose,
-                )
-                if verbose and split_files:
-                    print(f"Split masks saved:")
-                    for label_name, path in split_files.items():
-                        print(f"  {label_name}: {path}")
-
-            # Generate preview if requested
-            if args.preview:
-                preview_path = generate_preview(
-                    input_image=args.input,
-                    segmentation=args.output,
-                    verbose=verbose,
-                )
-                if verbose and preview_path:
-                    print(f"Preview saved to: {preview_path}")
 
         if verbose:
             print("\nDone!")

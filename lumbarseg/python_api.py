@@ -5,12 +5,11 @@ Simple API for segmenting lumbar paraspinal muscles from MRI scans.
 
 Usage:
     from lumbarseg import segment
-    segment("scan.nii.gz", "segmentation.nii.gz")
+    segment("scan.nii.gz", "results/")
 """
 
 import os
 import platform
-import sys
 import shutil
 import tempfile
 import subprocess
@@ -25,8 +24,6 @@ from .config import (
     CONFIG,
     TRAINER,
     PLANS,
-    LABELS,
-    get_lumbarseg_home,
     get_weights_dir,
     get_nnunet_results_dir,
 )
@@ -242,9 +239,6 @@ def detect_device() -> str:
         import torch
         if torch.cuda.is_available():
             return "cuda"
-        # Note: MPS disabled - nnU-Net hangs with MPS device
-        # elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-        #     return "mps"
     except ImportError:
         pass
     return "cpu"
@@ -258,18 +252,21 @@ def segment(
     verbose: bool = True,
     save_probabilities: bool = False,
     disable_tta: bool = False,
+    ground_truth: Optional[Union[str, Path, List[Path]]] = None,
 ) -> Path:
     """
     Segment lumbar paraspinal muscles from an MRI scan.
 
     This is the main API function. It handles all setup automatically.
+    Output is always a folder containing the multi-label segmentation,
+    separate binary masks for each muscle, and a preview image.
 
     Parameters
     ----------
     input : str or Path
         Path to input NIfTI file (.nii or .nii.gz)
     output : str or Path
-        Path for output segmentation file
+        Path for output directory (created if it doesn't exist)
     fold : int, str, or list of int
         Which fold(s) to use for inference:
         - "all" or "ensemble": Use all 5 folds (recommended, best accuracy)
@@ -277,7 +274,7 @@ def segment(
         - [0, 1, 2]: Use specific folds
         Default: "all"
     device : str, optional
-        Device for inference: "cuda", "cpu", or "mps"
+        Device for inference: "cuda" or "cpu".
         Auto-detected if not specified.
     verbose : bool
         Print progress messages. Default: True
@@ -286,20 +283,27 @@ def segment(
     disable_tta : bool
         Disable test-time augmentation. ~8x faster but slightly lower accuracy.
         Default: False
+    ground_truth : str, Path, or list of Path, optional
+        Ground truth mask(s) for evaluation. Either a single multi-label NIfTI
+        or a list of separate binary mask files.
 
     Returns
     -------
     Path
-        Path to the output segmentation file
+        Path to the output directory
 
     Examples
     --------
     >>> from lumbarseg import segment
-    >>> segment("scan.nii.gz", "segmentation.nii.gz")
-    >>> segment("scan.nii.gz", "seg.nii.gz", fold=0, device="cpu")
+    >>> segment("scan.nii.gz", "output/")
+    >>> segment("scan.nii.gz", "output/", fold=0, device="cpu")
+    >>> segment("scan.nii.gz", "output/", ground_truth=["L_ES.nii", "R_ES.nii", "L_Mult.nii", "R_Mult.nii"])
     """
     input_path = Path(input).absolute()
-    output_path = Path(output).absolute()
+    output_dir = Path(output).absolute()
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    seg_path = output_dir / "segmentation.nii.gz"
 
     total_start = time.time()
 
@@ -310,7 +314,8 @@ def segment(
 
     # Validate input
     if verbose:
-        print(f"\nInput: {input_path}")
+        print(f"\nInput:  {input_path}")
+        print(f"Output: {output_dir}")
     validate_input(input_path, verbose)
 
     # Setup environment
@@ -349,7 +354,7 @@ def segment(
     inference_start = time.time()
     _run_nnunet_inference(
         input_path=input_path,
-        output_path=output_path,
+        output_path=seg_path,
         folds=folds,
         device=device,
         save_probabilities=save_probabilities,
@@ -358,18 +363,39 @@ def segment(
     )
     inference_time = time.time() - inference_start
 
+    # Split into separate binary masks
+    split_segmentation(
+        segmentation=seg_path,
+        output_dir=output_dir,
+        verbose=verbose,
+    )
+
+    # Generate preview
+    generate_preview(
+        input_image=input_path,
+        segmentation=seg_path,
+        output_path=output_dir / "preview.png",
+        verbose=verbose,
+    )
+
+    # Evaluate against ground truth if provided
+    if ground_truth is not None:
+        evaluate(
+            prediction=seg_path,
+            ground_truth=ground_truth,
+            output_path=output_dir / "metrics.csv",
+            verbose=verbose,
+        )
+
     total_time = time.time() - total_start
 
     if verbose:
-        print(f"\nSegmentation saved to: {output_path}")
         print(f"\nTiming:")
         print(f"  Inference: {inference_time:.1f}s")
         print(f"  Total: {total_time:.1f}s")
-        print("\nOutput labels:")
-        for label_id, label_name in LABELS.items():
-            print(f"  {label_id}: {label_name}")
+        print(f"\nOutput directory: {output_dir}")
 
-    return output_path
+    return output_dir
 
 
 def _print_filtered_output(output: str):
@@ -439,6 +465,16 @@ def _run_nnunet_inference(
                 with gzip.open(nnunet_input, 'wb') as f_out:
                     shutil.copyfileobj(f_in, f_out)
 
+        # Reorient to RAS+ if needed (model expects RAS orientation)
+        import nibabel as nib
+        img = nib.load(str(nnunet_input))
+        orig_ornt = nib.aff2axcodes(img.affine)
+        if orig_ornt != ('R', 'A', 'S'):
+            img_ras = nib.as_closest_canonical(img)
+            nib.save(img_ras, str(nnunet_input))
+            if verbose:
+                print(f"  Reoriented from {orig_ornt} to RAS")
+
         # Create output directory
         output_dir = temp_dir / "output"
         output_dir.mkdir()
@@ -456,8 +492,6 @@ def _run_nnunet_inference(
 
         if device == "cpu":
             cmd.extend(["-device", "cpu"])
-        elif device == "mps":
-            cmd.extend(["-device", "mps"])
 
         if save_probabilities:
             cmd.append("--save_probabilities")
@@ -533,12 +567,14 @@ def segment_batch(
     """
     Segment multiple MRI scans in a directory.
 
+    Creates a subfolder for each case inside output_dir.
+
     Parameters
     ----------
     input_dir : str or Path
         Directory containing NIfTI files
     output_dir : str or Path
-        Directory for output segmentations
+        Directory for output (each case gets its own subfolder)
     fold : int, str, or list
         Fold(s) to use. Default: "all"
     device : str, optional
@@ -549,7 +585,7 @@ def segment_batch(
     Returns
     -------
     List[Path]
-        Paths to output segmentation files
+        Paths to output directories for each case
     """
     input_dir = Path(input_dir)
     output_dir = Path(output_dir)
@@ -569,20 +605,21 @@ def segment_batch(
         if verbose:
             print(f"\n[{i}/{len(nifti_files)}] {input_file.name}")
 
-        output_name = input_file.name
-        if output_name.endswith(".nii"):
-            output_name += ".gz"
-        output_file = output_dir / output_name
+        # Create case-specific output folder
+        case_name = input_file.stem
+        if case_name.endswith(".nii"):
+            case_name = case_name[:-4]
+        case_output = output_dir / case_name
 
         try:
             segment(
                 input=input_file,
-                output=output_file,
+                output=case_output,
                 fold=fold,
                 device=device,
                 verbose=verbose,
             )
-            outputs.append(output_file)
+            outputs.append(case_output)
         except Exception as e:
             print(f"  Error: {e}")
 
@@ -596,7 +633,7 @@ def generate_preview(
     input_image: Union[str, Path],
     segmentation: Union[str, Path],
     output_path: Optional[Union[str, Path]] = None,
-    n_slices: int = 3,
+    n_slices: int = 8,
     verbose: bool = True,
 ) -> Optional[Path]:
     """
@@ -611,7 +648,7 @@ def generate_preview(
     output_path : str or Path, optional
         Path for the output PNG. If not specified, uses segmentation path with .png extension.
     n_slices : int
-        Number of axial slices to show. Default: 3
+        Number of axial slices to show. Default: 8
     verbose : bool
         Print progress messages. Default: True
 
@@ -667,14 +704,22 @@ def generate_preview(
     img_data = img_ras.get_fdata()
     seg_data = seg_ras.get_fdata()
 
-    # Find axial slices (z-axis in RAS) with most segmentation content
-    slice_scores = []
+    # Find slices with segmentation content
+    seg_slices = []
     for z in range(seg_data.shape[2]):
         score = np.sum(seg_data[:, :, z] > 0)
-        slice_scores.append((z, score))
+        if score > 0:
+            seg_slices.append((z, score))
 
-    slice_scores.sort(key=lambda x: x[1], reverse=True)
-    selected_slices = sorted([s[0] for s in slice_scores[:n_slices]])
+    if not seg_slices:
+        if verbose:
+            print("Warning: No segmentation content found")
+        return None
+
+    # Spread slices evenly across the segmented region
+    n_slices = min(n_slices, len(seg_slices))
+    indices = np.linspace(0, len(seg_slices) - 1, n_slices, dtype=int)
+    selected_slices = [seg_slices[i][0] for i in indices]
 
     # Color map for segmentation labels
     # 0=transparent, 1=red (L_ES), 2=blue (R_ES), 3=green (L_MF), 4=yellow (R_MF)
@@ -687,12 +732,17 @@ def generate_preview(
     ]
     cmap = ListedColormap(colors)
 
-    # Create figure
-    fig, axes = plt.subplots(1, n_slices, figsize=(4 * n_slices, 4))
-    if n_slices == 1:
-        axes = [axes]
+    # Create figure in a grid layout
+    n_cols = min(4, n_slices)
+    n_rows = (n_slices + n_cols - 1) // n_cols
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4 * n_cols, 4 * n_rows))
+    axes = np.atleast_2d(axes)
 
-    for ax, z in zip(axes, selected_slices):
+    for idx, z in enumerate(selected_slices):
+        row = idx // n_cols
+        col = idx % n_cols
+        ax = axes[row, col]
+
         # Normalize image slice (axial = [:, :, z] in RAS orientation)
         img_slice = np.rot90(img_data[:, :, z])
         vmin, vmax = np.percentile(img_slice, [1, 99])
@@ -704,8 +754,14 @@ def generate_preview(
         # Plot
         ax.imshow(img_normalized, cmap='gray')
         ax.imshow(seg_slice, cmap=cmap, vmin=0, vmax=4)
-        ax.set_title(f'Slice {z}')
+        ax.set_title(f'Slice {z}', fontsize=10)
         ax.axis('off')
+
+    # Hide unused axes
+    for idx in range(len(selected_slices), n_rows * n_cols):
+        row = idx // n_cols
+        col = idx % n_cols
+        axes[row, col].axis('off')
 
     # Add legend
     from matplotlib.patches import Patch
@@ -717,9 +773,9 @@ def generate_preview(
     ]
     fig.legend(handles=legend_elements, loc='lower center', ncol=4, fontsize=10)
 
-    plt.suptitle('LumbarSeg - Segmentation Preview', fontsize=12)
+    plt.suptitle('LumbarSeg - Segmentation Preview', fontsize=14)
     plt.tight_layout()
-    plt.subplots_adjust(bottom=0.15)
+    plt.subplots_adjust(bottom=0.08)
 
     # Save
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -751,10 +807,10 @@ def split_segmentation(
     dict
         Dictionary mapping label names to output file paths
         {
-            'L_ES': Path('..._L_ES.nii.gz'),
-            'R_ES': Path('..._R_ES.nii.gz'),
-            'L_MF': Path('..._L_MF.nii.gz'),
-            'R_MF': Path('..._R_MF.nii.gz'),
+            'L_ES': Path('output_dir/L_ES.nii.gz'),
+            'R_ES': Path('output_dir/R_ES.nii.gz'),
+            'L_MF': Path('output_dir/L_MF.nii.gz'),
+            'R_MF': Path('output_dir/R_MF.nii.gz'),
         }
     """
     try:
@@ -784,13 +840,6 @@ def split_segmentation(
     affine = seg_img.affine
     header = seg_img.header
 
-    # Get base name (remove .nii.gz)
-    base_name = segmentation.name
-    for suffix in ['.nii.gz', '.nii']:
-        if base_name.endswith(suffix):
-            base_name = base_name[:-len(suffix)]
-            break
-
     output_files = {}
 
     # Create binary mask for each label (skip background = 0)
@@ -800,8 +849,8 @@ def split_segmentation(
         # Create binary mask
         mask = (seg_data == label_id).astype(np.uint8)
 
-        # Create output filename
-        output_name = f"{base_name}_{label_name}.nii.gz"
+        # Create output filename (just label_name.nii.gz)
+        output_name = f"{label_name}.nii.gz"
         output_path = output_dir / output_name
 
         # Save
@@ -815,3 +864,220 @@ def split_segmentation(
             print(f"  {label_name}: {voxel_count:,} voxels -> {output_name}")
 
     return output_files
+
+
+def _identify_gt_label(filename: str) -> Optional[int]:
+    """Identify the muscle label from a ground truth filename."""
+    name_lower = filename.lower()
+    if "r_es" in name_lower:
+        return 2
+    elif "l_es" in name_lower:
+        return 1
+    elif "r_mult" in name_lower or "r_mf" in name_lower:
+        return 4
+    elif "l_mult" in name_lower or "l_mf" in name_lower:
+        return 3
+    return None
+
+
+def _load_gt_as_multilabel(
+    ground_truth: Union[Path, List[Path]],
+) -> "tuple[np.ndarray, np.ndarray]":
+    """Load ground truth as a multi-label array.
+
+    Returns (data, affine) tuple. Handles both single multi-label file
+    and multiple separate binary mask files.
+    """
+    import nibabel as nib
+    import numpy as np
+
+    if isinstance(ground_truth, (str, Path)):
+        ground_truth = [Path(ground_truth)]
+    else:
+        ground_truth = [Path(p) for p in ground_truth]
+
+    if len(ground_truth) == 1:
+        gt_file = ground_truth[0]
+        gt_img = nib.load(str(gt_file))
+        gt_ras = nib.as_closest_canonical(gt_img)
+        return gt_ras.get_fdata(), gt_ras.affine
+
+    # Multiple files: combine into multi-label
+    ref_img = nib.load(str(ground_truth[0]))
+    ref_ras = nib.as_closest_canonical(ref_img)
+    combined = np.zeros(ref_ras.shape, dtype=np.uint8)
+
+    for gt_file in ground_truth:
+        label_id = _identify_gt_label(gt_file.name)
+        if label_id is None:
+            raise ValueError(
+                f"Cannot identify muscle label from filename: {gt_file.name}. "
+                "Expected filename containing L_ES, R_ES, L_Mult/L_MF, or R_Mult/R_MF."
+            )
+        mask_img = nib.load(str(gt_file))
+        mask_ras = nib.as_closest_canonical(mask_img)
+        mask_data = mask_ras.get_fdata()
+        combined[mask_data > 0.5] = label_id
+
+    return combined, ref_ras.affine
+
+
+def evaluate(
+    prediction: Union[str, Path],
+    ground_truth: Union[str, Path, List[Path]],
+    output_path: Optional[Union[str, Path]] = None,
+    verbose: bool = True,
+) -> dict:
+    """
+    Compare a segmentation prediction against ground truth masks.
+
+    Parameters
+    ----------
+    prediction : str or Path
+        Path to the predicted multi-label segmentation NIfTI file
+    ground_truth : str, Path, or list of Path
+        Ground truth. Either:
+        - A single multi-label NIfTI file (labels 0-4)
+        - A list of separate binary mask files (identified by filename)
+    output_path : str or Path, optional
+        Path to save metrics CSV. If not specified, saves next to prediction.
+    verbose : bool
+        Print results table. Default: True
+
+    Returns
+    -------
+    dict
+        Dictionary with per-class and mean metrics
+    """
+    import nibabel as nib
+    import numpy as np
+    from scipy.ndimage import distance_transform_edt
+
+    pred_img = nib.load(str(prediction))
+    pred_ras = nib.as_closest_canonical(pred_img)
+    pred_data = pred_ras.get_fdata()
+    spacing = pred_ras.header.get_zooms()[:3]
+
+    gt_data, _ = _load_gt_as_multilabel(ground_truth)
+
+    if pred_data.shape != gt_data.shape:
+        raise ValueError(
+            f"Shape mismatch: prediction {pred_data.shape} vs ground truth {gt_data.shape}"
+        )
+
+    label_names = {1: "L_ES", 2: "R_ES", 3: "L_MF", 4: "R_MF"}
+    results = {}
+
+    for label_id, label_name in label_names.items():
+        pred_bin = (pred_data == label_id).astype(float)
+        gt_bin = (gt_data == label_id).astype(float)
+
+        tp = np.sum((pred_bin > 0.5) & (gt_bin > 0.5))
+        fp = np.sum((pred_bin > 0.5) & (gt_bin < 0.5))
+        fn = np.sum((pred_bin < 0.5) & (gt_bin > 0.5))
+
+        # Dice
+        dice = (2.0 * tp) / (2.0 * tp + fp + fn + 1e-8)
+        # Jaccard
+        jaccard = tp / (tp + fp + fn + 1e-8)
+        # Precision & Recall
+        precision = tp / (tp + fp + 1e-8)
+        recall = tp / (tp + fn + 1e-8)
+
+        # Volumes
+        voxel_vol = float(np.prod(spacing))
+        pred_vol = int(np.sum(pred_bin > 0.5) * voxel_vol)
+        gt_vol = int(np.sum(gt_bin > 0.5) * voxel_vol)
+
+        # Surface distances (HD95, ASSD)
+        hd95 = np.nan
+        assd = np.nan
+        if np.sum(pred_bin) > 0 and np.sum(gt_bin) > 0:
+            try:
+                from scipy.ndimage import binary_erosion
+                pred_mask = pred_bin > 0.5
+                gt_mask = gt_bin > 0.5
+                # Surface = mask minus eroded mask
+                pred_surface = pred_mask & ~binary_erosion(pred_mask)
+                gt_surface = gt_mask & ~binary_erosion(gt_mask)
+                # Distance from each voxel to nearest GT/pred surface
+                dt_gt = distance_transform_edt(~gt_mask, sampling=spacing)
+                dt_pred = distance_transform_edt(~pred_mask, sampling=spacing)
+                pred_to_gt = dt_gt[pred_surface]
+                gt_to_pred = dt_pred[gt_surface]
+                if len(pred_to_gt) > 0 and len(gt_to_pred) > 0:
+                    all_dist = np.concatenate([pred_to_gt, gt_to_pred])
+                    hd95 = float(np.percentile(all_dist, 95))
+                    assd = float((np.mean(pred_to_gt) + np.mean(gt_to_pred)) / 2)
+            except Exception:
+                pass
+
+        results[label_name] = {
+            "Dice": dice,
+            "Jaccard": jaccard,
+            "HD95_mm": hd95,
+            "ASSD_mm": assd,
+            "Precision": precision,
+            "Recall": recall,
+            "Pred_Vol_mm3": pred_vol,
+            "GT_Vol_mm3": gt_vol,
+        }
+
+    # Compute mean row
+    mean_metrics = {}
+    for key in ["Dice", "Jaccard", "HD95_mm", "ASSD_mm", "Precision", "Recall"]:
+        vals = [v[key] for v in results.values() if not np.isnan(v[key])]
+        mean_metrics[key] = np.mean(vals) if vals else np.nan
+    mean_metrics["Pred_Vol_mm3"] = ""
+    mean_metrics["GT_Vol_mm3"] = ""
+    results["Mean"] = mean_metrics
+
+    # Save CSV
+    if output_path is None:
+        pred_path = Path(prediction)
+        output_path = pred_path.parent / "metrics.csv"
+    else:
+        output_path = Path(output_path)
+
+    with open(output_path, "w") as f:
+        header = "Muscle,Dice,Jaccard,HD95_mm,ASSD_mm,Precision,Recall,Pred_Vol_mm3,GT_Vol_mm3"
+        f.write(header + "\n")
+        for muscle, metrics in results.items():
+            row = [muscle]
+            for key in ["Dice", "Jaccard", "HD95_mm", "ASSD_mm", "Precision", "Recall", "Pred_Vol_mm3", "GT_Vol_mm3"]:
+                val = metrics[key]
+                if isinstance(val, float):
+                    if np.isnan(val):
+                        row.append("")
+                    else:
+                        row.append(f"{val:.4f}")
+                else:
+                    row.append(str(val))
+            f.write(",".join(row) + "\n")
+
+    # Print table
+    if verbose:
+        print("\nEvaluation Results:")
+        print("=" * 78)
+        print(f"{'Muscle':<10} {'Dice':>8} {'Jaccard':>8} {'HD95(mm)':>9} {'ASSD(mm)':>9} {'Precision':>10} {'Recall':>8}")
+        print("-" * 78)
+        for muscle, metrics in results.items():
+            d = metrics["Dice"]
+            j = metrics["Jaccard"]
+            h = metrics["HD95_mm"]
+            a = metrics["ASSD_mm"]
+            p = metrics["Precision"]
+            r = metrics["Recall"]
+            d_s = f"{d:.1%}" if not np.isnan(d) else "N/A"
+            j_s = f"{j:.1%}" if not np.isnan(j) else "N/A"
+            h_s = f"{h:.2f}" if not np.isnan(h) else "N/A"
+            a_s = f"{a:.2f}" if not np.isnan(a) else "N/A"
+            p_s = f"{p:.1%}" if not np.isnan(p) else "N/A"
+            r_s = f"{r:.1%}" if not np.isnan(r) else "N/A"
+            sep = "-" * 78 if muscle == "Mean" else ""
+            if sep:
+                print(sep)
+            print(f"{muscle:<10} {d_s:>8} {j_s:>8} {h_s:>9} {a_s:>9} {p_s:>10} {r_s:>8}")
+        print(f"\nMetrics saved to: {output_path}")
+
+    return results

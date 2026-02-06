@@ -13,12 +13,6 @@ from lumbarseg import config
 class TestConstants:
     """Test that all required constants are defined."""
 
-    def test_package_name(self):
-        assert config.PACKAGE_NAME == "lumbarseg"
-
-    def test_version(self):
-        assert config.VERSION == "1.0.0"
-
     def test_dataset_id(self):
         assert config.DATASET_ID == "001"
 
@@ -44,14 +38,6 @@ class TestConstants:
         assert len(config.MODEL_FILES) == 5
         for i in range(5):
             assert f"fold_{i}" in config.MODEL_FILES
-
-    def test_labels(self):
-        assert len(config.LABELS) == 5
-        assert config.LABELS[0] == "Background"
-        assert config.LABELS[1] == "Left Erector Spinae (L_ES)"
-        assert config.LABELS[2] == "Right Erector Spinae (R_ES)"
-        assert config.LABELS[3] == "Left Multifidus (L_MF)"
-        assert config.LABELS[4] == "Right Multifidus (R_MF)"
 
     def test_label_names(self):
         assert len(config.LABEL_NAMES) == 5

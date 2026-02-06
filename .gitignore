@@ -45,6 +45,8 @@ nnUNet_raw/Dataset001_LumbarMuscle/imagesTs/
 # Original/Archived Data
 disjoint_all/
 archive/
+test_data/
+release_files/
 
 # Logs and Outputs
 logs/
@@ -123,3 +125,7 @@ credentials.json
 
 # Local configuration (contains user-specific paths)
 config.sh
+
+# Temporary SLURM test scripts
+scripts/test_*.sbatch
+scripts/upload_weights.sh
