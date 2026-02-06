@@ -57,6 +57,11 @@ pixi add pytorch-cuda=12.1 -c pytorch -c nvidia  # For CUDA
 pixi run pip install .
 ```
 
+**Verify Installation:**
+```bash
+python -m pytest tests/ -v -m "not integration"
+```
+
 ### Run Segmentation
 
 ```bash
@@ -215,7 +220,7 @@ results = evaluate(
 
 - [nnU-Net v2](https://github.com/MIC-DKFZ/nnUNet) - Isensee et al., Nature Methods 2021
 - [Lumbar muscle segmentation review](https://www.sciencedirect.com/science/article/pii/S2950363924000206)
-- [Paraspinal muscle segmentation](https://onlinelibrary.wiley.com/doi/full/10.1002/jsp2.70003)
+- [Paraspinal muscle segmentation](https://onli.nelibrary.wiley.com/doi/full/10.1002/jsp2.70003)
 
 ## License
 
