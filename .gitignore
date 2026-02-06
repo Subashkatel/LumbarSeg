@@ -127,6 +127,7 @@ credentials.json
 config.sh
 CLAUDE.md
 lists/
+research.md
 
 # Temporary SLURM test scripts
 scripts/test_*.sbatch

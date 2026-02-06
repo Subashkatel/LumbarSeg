@@ -23,7 +23,7 @@ LumbarSeg provides automated segmentation of four lumbar paraspinal muscles from
 |--------|------|------|------|------|-----------|
 | Dice Score | 91.7% | 91.7% | 89.7% | 89.2% | **90.6%** |
 
-Trained on 347 subjects with 5-fold cross-validation using nnU-Net v2.
+Trained on 347 Dixon MRI volumes (~199 unique subjects, two scanners) with 5-fold cross-validation using nnU-Net v2.
 
 ## Quick Start
 
@@ -161,7 +161,7 @@ Optional:
 ## Input Requirements
 
 - **Format**: NIfTI (.nii or .nii.gz)
-- **Modality**: T1/T2-weighted Inculding Water Fat MRI of lumbar spine
+- **Modality**: Dixon MRI (water, fat, fat fraction, or ideal water images) of lumbar spine
 - **Orientation**: Any orientation (auto-reoriented to RAS before inference)
 
 ## Platform Support
