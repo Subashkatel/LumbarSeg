@@ -14,7 +14,7 @@ PLANS = "nnUNetPlans"
 
 # Model weights info (for auto-download)
 GITHUB_REPO = "Subashkatel/LumbarSeg"
-RELEASE_TAG = "v1.0"
+RELEASE_TAG = "v1.1"
 MODEL_FILES = {
     "fold_0": "fold_0_checkpoint_final.pth",
     "fold_1": "fold_1_checkpoint_final.pth",

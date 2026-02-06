@@ -18,7 +18,7 @@ Quick Start:
     segment("scan.nii.gz", "results/")
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "LumbarSeg Team"
 
 from .python_api import segment, evaluate
