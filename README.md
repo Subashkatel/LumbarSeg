@@ -127,6 +127,17 @@ R_MF          93.3%    87.4%     3.89      0.58      94.9%    91.6%
 Mean          94.1%    88.9%     3.69      0.54      95.4%    92.9%
 ```
 
+**Metrics explained:**
+
+| Metric | What it measures | Ideal |
+|--------|-----------------|-------|
+| **Dice** | Overall overlap between prediction and ground truth (harmonic mean of precision and recall) | 100% |
+| **Jaccard (IoU)** | Intersection over Union — stricter overlap measure than Dice | 100% |
+| **HD95 (mm)** | 95th percentile Hausdorff Distance — worst-case boundary error, ignoring top 5% outliers | 0 mm |
+| **ASSD (mm)** | Average Symmetric Surface Distance — average boundary error across all surface points | 0 mm |
+| **Precision** | Of all voxels predicted as muscle, how many are correct? High = less over-segmentation | 100% |
+| **Recall** | Of all actual muscle voxels, how many were detected? High = less under-segmentation | 100% |
+
 ### CLI Options
 
 ```
