@@ -257,6 +257,7 @@ def segment(
     device: Optional[str] = None,
     verbose: bool = True,
     save_probabilities: bool = False,
+    disable_tta: bool = False,
 ) -> Path:
     """
     Segment lumbar paraspinal muscles from an MRI scan.
@@ -282,6 +283,9 @@ def segment(
         Print progress messages. Default: True
     save_probabilities : bool
         Save probability maps. Default: False
+    disable_tta : bool
+        Disable test-time augmentation. ~8x faster but slightly lower accuracy.
+        Default: False
 
     Returns
     -------
@@ -350,6 +354,7 @@ def segment(
         device=device,
         save_probabilities=save_probabilities,
         verbose=verbose,
+        disable_tta=disable_tta,
     )
     inference_time = time.time() - inference_start
 
@@ -407,6 +412,7 @@ def _run_nnunet_inference(
     device: str,
     save_probabilities: bool,
     verbose: bool,
+    disable_tta: bool = False,
 ):
     """Run nnU-Net inference using subprocess."""
     # Create temp directory for nnU-Net (requires specific file naming)
@@ -458,6 +464,9 @@ def _run_nnunet_inference(
 
         if not verbose:
             cmd.append("--disable_progress_bar")
+
+        if disable_tta:
+            cmd.append("--disable_tta")
 
         # On macOS, disable multiprocessing to prevent deadlocks.
         # Python 3.8+ on macOS uses 'spawn' (not 'fork') for multiprocessing,

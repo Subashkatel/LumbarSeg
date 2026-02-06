@@ -86,6 +86,11 @@ Examples:
         help="Output separate binary mask files for each muscle class (L_ES, R_ES, L_MF, R_MF)",
     )
     parser.add_argument(
+        "--disable-tta",
+        action="store_true",
+        help="Disable test-time augmentation (8x faster, slightly lower accuracy)",
+    )
+    parser.add_argument(
         "-q", "--quiet",
         action="store_true",
         help="Suppress output messages",
@@ -129,6 +134,7 @@ Examples:
                 device=args.device,
                 verbose=verbose,
                 save_probabilities=args.save_probabilities,
+                disable_tta=args.disable_tta,
             )
 
             # Split into separate masks if requested
